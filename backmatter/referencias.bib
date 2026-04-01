@@ -1,56 +1,153 @@
 % =============================================================================
-% Ficheiro de Referências Bibliográficas (BibTeX)
-% Formato: Autor-Data (NP 405)
+% Referências Bibliográficas (BibTeX) — Formato NP 405 / Autor-Data
+%
+% Ordenar alfabeticamente pelo último nome do primeiro autor.
+% Evitar referências de material sem revisão científica adequada.
 % =============================================================================
 
-% --- Exemplo de artigo ---
-@article{exemplo_artigo2024,
-    author  = {Sobrenome, Nome and Outro, Autor},
-    title   = {Título do Artigo Científico},
-    journal = {Nome da Revista Científica},
-    year    = {2024},
-    volume  = {10},
-    number  = {2},
-    pages   = {1--15},
-    doi     = {10.1234/exemplo}
+% --- Artigo em conferência ---
+@inproceedings{arroja1999,
+    author    = {Arroja, L. and Oliveira, G. and Capela, I.},
+    title     = {Contribuição para a descontaminação de solos -- Metodologias de implementação},
+    booktitle = {Actas da 6ª Conferência Nacional sobre a Qualidade do Ambiente},
+    year      = {1999},
+    pages     = {607--616},
+    volume    = {2},
+    address   = {Lisboa},
+    publisher = {Centro de Congressos da AIP}
 }
 
-% --- Exemplo de livro ---
-@book{exemplo_livro2023,
-    author    = {Apelido, Nome},
-    title     = {Título do Livro},
-    publisher = {Editora},
-    year      = {2023},
-    address   = {Cidade},
-    edition   = {2},
-    isbn      = {978-0-000-00000-0}
+% --- Capítulo de livro ---
+@incollection{broome2007,
+    author    = {Broome, J.},
+    title     = {Tomar uma decisão através do raciocínio},
+    booktitle = {Decisão Perspectivas Interdisciplinares},
+    editor    = {Antunes, C.H. and Dias, L.C.},
+    year      = {2007},
+    pages     = {219--240},
+    publisher = {Imprensa da Universidade de Coimbra}
 }
 
-% --- Exemplo de conferência ---
-@inproceedings{exemplo_conf2024,
-    author    = {Autor, Primeiro and Segundo, Autor},
-    title     = {Título do Artigo de Conferência},
-    booktitle = {Proceedings of the International Conference on Example},
-    year      = {2024},
-    pages     = {100--110},
-    publisher = {Publisher},
-    address   = {Local da Conferência}
+% --- Artigo em conferência ---
+@inproceedings{champ1988,
+    author    = {Champ, D.R. and Schroeter, J.},
+    title     = {Bacterial transport in fractured rock},
+    booktitle = {Proceedings of the International Conference on Water and Wastewater Microbiology},
+    year      = {1988},
+    pages     = {81--87},
+    address   = {Newport Beach, USA}
 }
 
-% --- Exemplo de recurso online ---
-@online{exemplo_online2024,
-    author  = {{Organização}},
-    title   = {Título da Página Web},
-    year    = {2024},
-    url     = {https://www.exemplo.com},
-    urldate = {2024-01-15}
+% --- Recurso online / relatório técnico ---
+@online{chou1993,
+    author  = {Chou, L. and McClintock, R. and Moretti, F. and Nix, D.H.},
+    title   = {Technology and education: New wine in new bottles -- Choosing pasts and imagining educational futures},
+    year    = {1993},
+    url     = {http://www.ilt.columbia.edu/publications/papers/newwine1.html},
+    urldate = {2000-08-24},
+    institution = {Columbia University, Institute for Learning Technologies}
 }
 
-% --- Exemplo de dissertação ---
-@mastersthesis{exemplo_tese2023,
-    author  = {Estudante, Nome},
-    title   = {Título da Dissertação de Mestrado},
-    school  = {Instituto Politécnico da Guarda},
-    year    = {2023},
-    address = {Guarda, Portugal}
+% --- Artigo de revista ---
+@article{fleischmann1990,
+    author  = {Fleischmann, B.},
+    title   = {The discrete lot-sizing and scheduling problem},
+    journal = {European Journal of Operational Research},
+    year    = {1990},
+    volume  = {44},
+    pages   = {337--348}
 }
+
+% --- Artigo de revista online ---
+@article{fredrickson2000,
+    author  = {Fredrickson, B.L.},
+    title   = {Cultivating positive emotions to optimize health and well-being},
+    journal = {Prevention \& Treatment},
+    year    = {2000},
+    volume  = {3},
+    number  = {1},
+    url     = {http://journals.apa.org/prevention/volume3/pre0030001a.html},
+    urldate = {2000-11-20}
+}
+
+% --- Livro ---
+@book{hillier2001,
+    author    = {Hillier, F.S. and Lieberman, G.J.},
+    title     = {Introduction to Operations Research},
+    publisher = {McGraw-Hill},
+    year      = {2001},
+    edition   = {7}
+}
+
+% --- Dissertação de mestrado ---
+@mastersthesis{hortamonteiro1994,
+    author  = {Horta-Monteiro, M.C.S.M.},
+    title   = {Utilização de Água Residual Urbana na Cultura de Azevém (\textit{Lolium multiflorum} Lam.)},
+    school  = {Instituto Superior de Agronomia -- Universidade Técnica de Lisboa},
+    year    = {1994},
+    address = {Lisboa},
+    type    = {Tese de Mestrado em Nutrição Vegetal, Fertilidade do Solo e Fertilização}
+}
+
+% --- Organização / entidade ---
+@online{ine2003,
+    author  = {{Instituto Nacional de Estatística}},
+    title   = {Índices de Preços na Produção Industrial},
+    year    = {2003},
+    url     = {http://www.ine.pt},
+    urldate = {2003-11-24}
+}
+
+% --- Norma portuguesa ---
+@techreport{np4051994,
+    author      = {{Instituto Português da Qualidade}},
+    title       = {Norma Portuguesa para referências bibliográficas: Documentos impressos},
+    institution = {Ministério da Indústria e Energia},
+    year        = {1994},
+    number      = {NP 405-1},
+    address     = {Lisboa}
+}
+
+% --- Tese de doutoramento ---
+@phdthesis{oliveira2005,
+    author  = {Oliveira, M.C.},
+    title   = {Algoritmos e Estratégias de Gestão do Problema de Contacto com Atrito em Grandes Deformações. Aplicação à Estampagem de Chapas Metálicas},
+    school  = {Faculdade de Ciências e Tecnologia, Universidade de Coimbra},
+    year    = {2005},
+    address = {Coimbra},
+    type    = {Tese de Doutoramento em Engenharia Mecânica}
+}
+
+% --- Artigo de revista ---
+@article{pattloch2001,
+    author  = {Pattloch, M. and Schmidt, G. and Kovaliov, M.Y.},
+    title   = {Heuristic algorithms for lot size scheduling with application in the tobacco industry},
+    journal = {Computers \& Industrial Engineering},
+    year    = {2001},
+    volume  = {39},
+    pages   = {235--253}
+}
+
+% --- Capítulo de livro ---
+@incollection{silko1991,
+    author    = {Silko, L.M.},
+    title     = {The man to send rain clouds},
+    booktitle = {Imagining America: Stories from the Promised Land},
+    editor    = {Brown, W. and Ling, A.},
+    year      = {1991},
+    publisher = {Persea},
+    address   = {New York}
+}
+
+% --- Livro ---
+@book{wiendhal1995,
+    author    = {Wiendhal, H.P.},
+    title     = {Load-Oriented Manufacturing Control},
+    publisher = {Springer},
+    year      = {1995},
+    address   = {Berlin}
+}
+
+% =============================================================================
+% Adicionar as suas referências abaixo
+% =============================================================================

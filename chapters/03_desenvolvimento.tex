@@ -2,7 +2,8 @@
 % Capítulo 3 — Desenvolvimento
 % Começar o capítulo numa nova página e incluir uma breve descrição sobre
 % qual será o assunto do capítulo.
-% Este é o capítulo que descreve o desenvolvimento do projeto.
+% Este é o capítulo que descreve o desenvolvimento do sistema que constitui
+% a solução implementada para o problema identificado.
 % =============================================================================
 
 \chapter{Desenvolvimento de \ldots}
@@ -14,11 +15,10 @@ Este capítulo descreve o processo de desenvolvimento do trabalho, incluindo a a
 \section{Análise de Requisitos}
 \label{sec:requisitos}
 
-% Responder às seguintes questões:
-% - Quais são os processos e os dados a serem gerados pelo sistema?
-% - Quais são as restrições operacionais?
-% - Quem irá utilizar o sistema?
-% - De que forma esses elementos influenciam o projeto do sistema?
+% Quais são os processos, os dados a serem gerados pelo sistema, as restrições
+% operacionais e as pessoas que irão utilizá-lo? De que forma esses elementos
+% vão relacionar-se entre si? Os requisitos são as premissas para que o sistema
+% a desenvolver possa cumprir os objetivos definidos para o sistema.
 
 \subsection{Requisitos Funcionais}
 \label{subsec:req_funcionais}
@@ -45,10 +45,11 @@ Listar os requisitos não funcionais do sistema.
 \section{Arquitetura do Sistema}
 \label{sec:arquitetura}
 
-% Responder à seguinte questão:
-% - Qual é a arquitetura definida para o sistema desenvolvido, com base nos
-%   requisitos? Usar um diagrama que identifique todos os componentes
-%   principais do sistema e as suas relações.
+% Qual é a arquitetura definida para o sistema desenvolvido, com base nos
+% requisitos? Usar um diagrama que identifique todos os módulos do sistema
+% e os fluxos de dados entre esses módulos. Apresentar o diagrama seguido
+% de uma descrição genérica.
+
 Descrever a arquitetura do sistema, incluindo diagramas relevantes.
 
 % Exemplo de inclusão de figura:
@@ -63,35 +64,45 @@ Descrever a arquitetura do sistema, incluindo diagramas relevantes.
 \section{Implementação do Módulo A}
 \label{sec:modulo_a}
 
-% Responder à seguinte questão:
-% - Como é que o módulo foi implementado? A descrição deve ser
-%   suficientemente detalhada para explicar todos os aspetos da
-%   implementação. Usar figuras, tabelas, diagramas e excertos de código
-%   para suportar a explicação.
+% Como é que o módulo A foi implementado? A descrição deve ser suficientemente
+% detalhada para explicar todos os aspetos da implementação do módulo.
+% Use diagramas, figuras, tabelas, equações, algoritmos, etc., quanto possível.
 
+Descrever a implementação do módulo A.
+
+% Heading 3 — \subsection
 \subsection{Subsecção do Módulo A}
 \label{subsec:modulo_a_sub}
 
 Descrever os aspetos relevantes desta subsecção.
 
+% Heading 4 — \subsubsection
+\subsubsection{Sub-subsecção}
+\label{subsubsec:modulo_a_subsub}
+
+Descrever conteúdo de nível 4.
+
+% Heading 5 — \paragraph (usado apenas quando estritamente necessário)
+\paragraph{Parágrafo com título}
+
+Descrever conteúdo de nível 5. Usar apenas quando absolutamente necessário.
+
 % Exemplo de código fonte:
-% \begin{lstlisting}[language=Java, caption={Exemplo de código.}, label={lst:exemplo}]
-% public class HelloWorld {
-%     public static void main(String[] args) {
-%         System.out.println("Hello, World!");
-%     }
-% }
+% \begin{lstlisting}[language=Python, caption={Exemplo de código.}, label={lst:exemplo}]
+% def hello_world():
+%     print("Hello, World!")
 % \end{lstlisting}
 
 % ---- 3.4 Implementação do Módulo B ----
 \section{Implementação do Módulo B}
 \label{sec:modulo_b}
 
-% Repetir a estrutura anterior para cada módulo identificado no
-% diagrama de arquitetura do sistema.
+% Como é que o módulo B foi implementado? Repetir a estrutura anterior
+% para cada módulo identificado no diagrama de arquitetura do sistema.
+
 Descrever a implementação do módulo B.
 
-% ---- 3.5 Implementação do Módulo \ldots ----
+% ---- 3.5 Implementação do Módulo ... ----
 % \section{Implementação do Módulo \ldots}
 % \label{sec:modulo_x}
 % Repetir para cada módulo adicional.
@@ -100,7 +111,8 @@ Descrever a implementação do módulo B.
 \section{Protótipo Final}
 \label{sec:prototipo}
 
-% Se o projeto consistiu no desenvolvimento de um protótipo (aplicativo de
-% software ou dispositivo físico), apresentar e descrever esse protótipo
-% com as suas principais funcionalidades.
+% Se o projeto consistiu no desenvolvimento de algum tipo de protótipo
+% (aplicativo de software ou dispositivo físico), apresentar e descrever
+% esse protótipo final nesta secção.
+
 Apresentar o protótipo ou as interfaces desenvolvidas.

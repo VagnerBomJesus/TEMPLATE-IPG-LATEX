@@ -1,44 +1,43 @@
 % =============================================================================
 % Símbolos e Acrónimos — remover as secções que não se aplicarem.
 % Se nenhuma se aplicar, remover este ficheiro e o \input em main.tex.
+%
+% Incluir uma lista de símbolos se houver necessidade de referenciar
+% diversos símbolos ao longo de todo o relatório. Se usar símbolos apenas
+% pontualmente, em secções específicas, talvez não necessite desta lista.
 % =============================================================================
 
 \chapter*{Símbolos e Acrónimos}
 \addcontentsline{toc}{chapter}{Símbolos e Acrónimos}
 
 % --- Símbolos (remover se não aplicável) ---
-% Incluir uma lista de símbolos se existir necessidade de referenciar
-% diversos símbolos ao longo do relatório. Se usar símbolos apenas
-% pontualmente, descreva-os no próprio texto, junto da equação.
 \section*{Símbolos}
 
-\begin{longtable}{@{}ll@{}}
-    $\mathbf{0}$          & Tensor nulo \\
-    $a, b, c$             & Escalares no espaço real \\
-    $\mathbf{A}$          & Tensores no espaço real \\
+\begin{longtable}{@{}p{3cm}l@{}}
+    $\mathbf{0}$          & Tensor nulo \\[0.3cm]
+    $a, \ldots, z$        & Escalares no espaço real $\mathbb{R}$ \\[0.3cm]
+    $\mathbf{a}, \ldots, \mathbf{z}$ & Tensores no espaço real $\mathbb{R}^n$ \\[0.3cm]
     $E$                   & Módulo de elasticidade \\
-    % Adicionar mais símbolos conforme necessário
 \end{longtable}
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 % --- Acrónimos (remover se não aplicável) ---
 \section*{Acrónimos}
 
-\begin{longtable}{@{}ll@{}}
-    ASTM  & \textit{American Society for Testing and Materials} \\
-    API   & \textit{Application Programming Interface} \\
-    CSS   & \textit{Cascading Style Sheets} \\
-    ESTG  & Escola Superior de Tecnologia e Gestão \\
-    HTML  & \textit{HyperText Markup Language} \\
-    HTTP  & \textit{HyperText Transfer Protocol} \\
-    IPG   & Instituto Politécnico da Guarda \\
-    MIT   & \textit{Massachusetts Institute of Technology} \\
-    REST  & \textit{Representational State Transfer} \\
-    SQL   & \textit{Structured Query Language} \\
-    UI    & \textit{User Interface} \\
+\begin{longtable}{@{}p{3cm}l@{}}
+    ASTM  & American Society for Testing and Materials \\[0.3cm]
+    DEM   & Departamento de Engenharia Mecânica \\[0.3cm]
+    ESTG  & Escola Superior de Tecnologia e Gestão \\[0.3cm]
+    FCTUC & Faculdade de Ciências e Tecnologia da Universidade de Coimbra \\[0.3cm]
+    HTML  & \textit{HyperText Markup Language} \\[0.3cm]
+    HTTP  & \textit{HyperText Transfer Protocol} \\[0.3cm]
+    IPG   & Instituto Politécnico da Guarda \\[0.3cm]
+    MIT   & \textit{Massachusetts Institute of Technology} \\[0.3cm]
+    REST  & \textit{Representational State Transfer} \\[0.3cm]
+    SQL   & \textit{Structured Query Language} \\[0.3cm]
+    UI    & \textit{User Interface} \\[0.3cm]
     UX    & \textit{User Experience} \\
-    % Adicionar mais acrónimos conforme necessário
 \end{longtable}
 
 \cleardoublepage

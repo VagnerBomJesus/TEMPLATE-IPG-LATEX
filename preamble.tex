@@ -139,8 +139,18 @@
 \counterwithin{lstlisting}{chapter}
 
 % --- Profundidade do índice ---
+% tocdepth: 1=section, 2=subsection, 3=subsubsection
+% secnumdepth: nível máximo numerado (4=paragraph)
 \setcounter{tocdepth}{3}
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{4}
+
+% Estilo do \paragraph para funcionar como Heading 5
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}%
+    {1.5ex \@plus 1ex \@minus .2ex}%
+    {0.5em}%
+    {\normalfont\normalsize\bfseries}}
+\makeatother
 
 % --- Glossário / Acrónimos (opcional) ---
 \usepackage[acronym,nonumberlist,toc]{glossaries}
