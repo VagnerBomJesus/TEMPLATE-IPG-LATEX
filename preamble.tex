@@ -1,0 +1,147 @@
+% =============================================================================
+% Preâmbulo — Pacotes e Configurações
+% =============================================================================
+
+% --- Codificação e língua ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+
+% --- Fonte ---
+\usepackage{lmodern}
+
+% --- Geometria da página ---
+\usepackage[
+    a4paper,
+    top=2.5cm,
+    bottom=2.5cm,
+    inner=3cm,
+    outer=2.5cm
+]{geometry}
+
+% --- Espaçamento entre linhas ---
+\usepackage{setspace}
+\onehalfspacing
+
+% --- Cabeçalhos e rodapés ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Redefinir plain style (páginas de início de capítulo)
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+% --- Gráficos e imagens ---
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+% --- Cores ---
+\usepackage{xcolor}
+\definecolor{azulIPG}{HTML}{00467F}
+
+% --- Tabelas ---
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+
+% --- Matemática ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% --- Código fonte ---
+\usepackage{listings}
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{azulIPG}\bfseries,
+    commentstyle=\color{gray},
+    stringstyle=\color{red!70!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=8pt,
+    breaklines=true,
+    frame=single,
+    framexleftmargin=15pt,
+    captionpos=b,
+    tabsize=4,
+    showstringspaces=false,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate=
+        {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+        {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+        {à}{{\`a}}1 {ã}{{\~a}}1 {õ}{{\~o}}1
+        {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1
+}
+
+% --- Hiperligações ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=azulIPG,
+    citecolor=azulIPG,
+    urlcolor=azulIPG,
+    bookmarksnumbered=true,
+    pdfauthor={\nomeAutor},
+    pdftitle={\tituloRelatorio}
+}
+
+% --- Bibliografia ---
+\usepackage[
+    backend=biber,
+    style=authoryear,
+    sorting=nyt,
+    natbib=true,
+    maxbibnames=99
+]{biblatex}
+\addbibresource{backmatter/referencias.bib}
+
+% --- Legendas ---
+% Separador " – " conforme norma do modelo Word do IPG
+\usepackage{caption}
+\captionsetup{
+    font=small,
+    labelfont=bf,
+    format=hang,
+    labelsep=none,
+    textformat=period
+}
+% Redefinir o separador para " – " (travessão)
+\DeclareCaptionLabelSeparator{travessao}{ \textendash\ }
+\captionsetup{labelsep=travessao}
+
+% --- Subcapturas ---
+\usepackage{subcaption}
+
+% --- Indentação do primeiro parágrafo ---
+\usepackage{indentfirst}
+\setlength{\parindent}{1.25cm}
+
+% --- Enumerações e listas ---
+\usepackage{enumitem}
+
+% --- PDF pages (para incluir PDFs, se necessário) ---
+\usepackage{pdfpages}
+
+% --- Numeração de figuras e tabelas por capítulo ---
+\usepackage{chngcntr}
+\counterwithin{figure}{chapter}
+\counterwithin{table}{chapter}
+\counterwithin{equation}{chapter}
+\counterwithin{lstlisting}{chapter}
+
+% --- Profundidade do índice ---
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+% --- Glossário / Acrónimos (opcional) ---
+\usepackage[acronym,nonumberlist,toc]{glossaries}
+\makeglossaries

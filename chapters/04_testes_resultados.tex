@@ -1,0 +1,94 @@
+% =============================================================================
+% Capítulo 4 — Testes e Resultados
+% Começar o capítulo numa nova página e incluir uma breve descrição sobre
+% qual será o assunto do capítulo.
+%
+% O objetivo deste capítulo é mostrar que o sistema funciona como pretendido
+% (atende aos requisitos e opera de acordo com as especificações).
+%
+% Considerar os seguintes tipos principais de testes:
+%   - Testes de Validação: verificar se o sistema faz o que era suposto fazer
+%     (ex.: testes de unidade, integração, sistema, utilizador).
+%   - Testes de Verificação: verificar se o sistema atende aos requisitos
+%     não funcionais (ex.: desempenho, usabilidade, segurança).
+%   - Casos de Uso: mostrar o sistema em situações reais de utilização.
+%
+% Sempre que possível, usar testes padrão reconhecidos pela comunidade
+% científica. Apresentar os resultados usando tabelas, figuras e equações.
+% Incluir referência bibliográfica nas legendas de tabelas e figuras quando
+% estas forem de outros autores.
+% =============================================================================
+
+\chapter{Testes e Resultados}
+\label{cap:testes}
+
+Este capítulo descreve os testes realizados para validar e verificar o sistema desenvolvido, bem como os resultados obtidos.
+
+% ---- 4.1 Teste A ----
+\section{Teste A}
+\label{sec:teste_a}
+
+% Responder às seguintes questões:
+% - O que se queria testar com este teste?
+% - Como foi preparado e realizado?
+% - Quais foram os resultados?
+% - Qual é a análise dos resultados?
+Descrever o objetivo, a preparação, a execução e os resultados do teste A.
+
+% Exemplo de tabela de resultados:
+\begin{table}[htbp]
+    \centering
+    \caption{Matriz de Confusão.}
+    \label{tab:confusao}
+    \begin{tabular}{lcc}
+        \toprule
+        & \textbf{Previsto Positivo} & \textbf{Previsto Negativo} \\
+        \midrule
+        \textbf{Real Positivo} & TP & FN \\
+        \textbf{Real Negativo} & FP & TN \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Apresentar as equações devidamente formatadas e numeradas para referência no texto.
+
+\begin{equation}
+    \label{eq:accuracy}
+    \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item $TP$ --- \textit{True Positives} (verdadeiros positivos);
+    \item $TN$ --- \textit{True Negatives} (verdadeiros negativos);
+    \item $FP$ --- \textit{False Positives} (falsos positivos);
+    \item $FN$ --- \textit{False Negatives} (falsos negativos).
+\end{itemize}
+
+As variáveis devem ser sempre escritas em itálico, tanto na equação como no texto.
+
+% Exemplo de figura com gráfico de resultados:
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{grafico_resultados.png}
+%     \caption{Tipos de Gráficos \citep{chave_referencia}.}
+%     \label{fig:graficos}
+% \end{figure}
+
+% ---- 4.2 Teste B ----
+\section{Teste B}
+\label{sec:teste_b}
+
+% Repetir a estrutura anterior para cada teste realizado.
+Descrever o objetivo, a preparação, a execução e os resultados do teste B.
+
+% ---- 4.x Teste \ldots ----
+% \section{Teste \ldots}
+% \label{sec:teste_x}
+% Repetir para cada teste adicional.
+
+% ---- Discussão dos Resultados ----
+\section{Discussão dos Resultados}
+\label{sec:discussao}
+
+Analisar e discutir os resultados obtidos nos testes, relacionando-os com os objetivos definidos no Capítulo~\ref{cap:introducao}.

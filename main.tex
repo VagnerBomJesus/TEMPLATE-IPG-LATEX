@@ -1,0 +1,92 @@
+% =============================================================================
+% Template LaTeX — Mestrado em Computação Móvel
+% Instituto Politécnico da Guarda (IPG)
+% Escola Superior de Tecnologia e Gestão (ESTG)
+% =============================================================================
+
+\documentclass[12pt,a4paper,twoside,openright]{report}
+
+% --- Dados do documento (preencher aqui) ---
+\newcommand{\tituloRelatorio}{Título do Relatório de Estágio / Dissertação / Projeto}
+\newcommand{\nomeAutor}{Nome Completo do Autor}
+\newcommand{\numeroAluno}{Número do Aluno}
+\newcommand{\nomeOrientador}{Prof. Doutor Nome do Orientador}
+\newcommand{\nomeCoorientador}{Prof. Doutor Nome do Coorientador} % remover da capa se não houver coorientador
+\newcommand{\mesAno}{Junho | 2025}
+\newcommand{\anoLetivo}{2024/2025}
+\newcommand{\tipoRelatorio}{Relatório de Estágio} % opções: Relatório de Estágio | Dissertação | Projeto
+
+% --- Carregar preâmbulo (pacotes e configurações) ---
+\input{preamble}
+
+% =============================================================================
+\begin{document}
+
+% ---- FRONTMATTER (numeração romana) ----
+\frontmatter
+\pagestyle{empty}
+
+% Capa
+\input{frontmatter/capa}
+
+% Citação
+\input{frontmatter/citacao}
+
+% Dedicatória (opcional)
+\input{frontmatter/dedicatoria}
+
+% Agradecimentos
+\input{frontmatter/agradecimentos}
+
+% Resumo (PT)
+\input{frontmatter/resumo}
+
+% Abstract (EN)
+\input{frontmatter/abstract}
+
+% ---- Índices ----
+\pagestyle{fancy}
+
+% Índice geral
+\tableofcontents
+\cleardoublepage
+
+% Índice de figuras
+\listoffigures
+\cleardoublepage
+
+% Índice de tabelas
+\listoftables
+\cleardoublepage
+
+% Lista de símbolos e acrónimos
+\input{frontmatter/simbolos_acronimos}
+
+% ---- MAINMATTER (numeração árabe) ----
+\mainmatter
+
+% Cap. 1 — Introdução
+\input{chapters/01_introducao}
+
+% Cap. 2 — Trabalho Relacionado
+\input{chapters/02_trabalho_relacionado}
+
+% Cap. 3 — Desenvolvimento
+\input{chapters/03_desenvolvimento}
+
+% Cap. 4 — Testes e Resultados
+\input{chapters/04_testes_resultados}
+
+% Cap. 5 — Conclusões
+\input{chapters/05_conclusoes}
+
+% ---- BACKMATTER ----
+\backmatter
+
+% Referências bibliográficas
+\input{backmatter/bibliografia}
+
+% Anexos
+\input{backmatter/anexos}
+
+\end{document}
