@@ -137,7 +137,15 @@ Responder a: resumo do projeto (problema + solução) → resumo dos testes e re
 
 | Elemento | Configuração |
 |----------|-------------|
-| Fonte | Latin Modern, 12pt |
+| Corpo do texto | Times New Roman, 12pt |
+| Heading 1 (`\chapter`) | Calibri Bold, 18pt |
+| Heading 2 (`\section`) | Calibri Bold, 16pt |
+| Heading 3 (`\subsection`) | Calibri Bold, 14pt |
+| Heading 4 (`\subsubsection`) | Calibri, 12pt |
+| Heading 5 (`\paragraph`) | Calibri, 12pt |
+| Cabeçalhos e rodapés | Calibri, 10pt |
+| Legendas (caption) | Calibri, 10pt |
+| Código fonte | Courier New |
 | Espaçamento | 1,5 linhas |
 | Margens | A4 — superior/inferior 2,5 cm; interior 3 cm; exterior 2,5 cm |
 | Numeração de páginas | Romana no frontmatter; árabe nos capítulos |
@@ -166,22 +174,25 @@ Responder a: resumo do projeto (problema + solução) → resumo dos testes e re
 ### Pré-requisitos
 
 - [TeX Live](https://www.tug.org/texlive/) ou [MiKTeX](https://miktex.org/)
-- Compilador: `pdflatex`
+- Compilador: **`xelatex`** (obrigatório para fontes Times New Roman e Calibri)
 - Gestor de bibliografia: `biber`
+- Fontes do sistema instaladas: **Times New Roman** e **Calibri** (incluídas no Windows e Office)
+
+> **Nota:** Este template usa `XeLaTeX` (não `pdflatex`) para aceder directamente às fontes do sistema operativo e reproduzir fielmente as fontes do modelo Word oficial do IPG.
 
 ### Compilação manual (sequência obrigatória)
 
 ```bash
-pdflatex main.tex
+xelatex main.tex
 biber main
-pdflatex main.tex
-pdflatex main.tex
+xelatex main.tex
+xelatex main.tex
 ```
 
 ### Compilação com latexmk (recomendado)
 
 ```bash
-latexmk -pdf -bibtex main.tex
+latexmk -xelatex -bibtex main.tex
 ```
 
 ### Limpeza dos ficheiros auxiliares
@@ -271,17 +282,19 @@ Colocar ficheiros de imagem na pasta `images/` e incluir com:
 
 | Pacote | Finalidade |
 |--------|-----------|
+| `fontspec` | Fontes do sistema: Times New Roman e Calibri (requer XeLaTeX) |
+| `titlesec` | Formatação dos headings (tamanho e estilo por nível) |
 | `babel` | Língua portuguesa |
 | `geometry` | Margens (A4, inner 3 cm, outer 2,5 cm) |
-| `fancyhdr` | Cabeçalhos e rodapés |
+| `fancyhdr` | Cabeçalhos e rodapés (Calibri 10pt) |
 | `graphicx` | Inclusão de imagens |
 | `booktabs` | Tabelas de qualidade profissional |
 | `amsmath` / `amssymb` | Equações e símbolos matemáticos |
 | `listings` | Código fonte com realce de sintaxe |
 | `hyperref` | Hiperligações no PDF |
-| `biblatex` + `biber` | Gestão de referências (Autor-Data) |
+| `biblatex` + `biber` | Gestão de referências (Autor-Data, NP 405) |
 | `xcolor` | Cores (azul IPG `#00467F`) |
-| `caption` | Legendas com separador travessão (–) |
+| `caption` | Legendas Calibri 10pt com separador travessão (–) |
 | `subcaption` | Subfiguras e subtabelas |
 | `longtable` | Tabelas de múltiplas páginas |
 | `setspace` | Espaçamento entre linhas |

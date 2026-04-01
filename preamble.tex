@@ -1,14 +1,28 @@
 % =============================================================================
 % Preâmbulo — Pacotes e Configurações
+%
+% IMPORTANTE: Este template requer XeLaTeX ou LuaLaTeX (NÃO pdflatex)
+%   Compilar com:  xelatex main.tex
+%   Com latexmk:   latexmk -xelatex main.tex
+%   Com biber:     latexmk -xelatex -bibtex main.tex
 % =============================================================================
 
-% --- Codificação e língua ---
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+% --- Língua ---
 \usepackage[portuguese]{babel}
 
-% --- Fonte ---
-\usepackage{lmodern}
+% --- Fontes (requer XeLaTeX ou LuaLaTeX + fontspec) ---
+% Times New Roman  → corpo do texto (12pt — definido no \documentclass)
+% Calibri          → todos os headings, cabeçalhos, rodapés, legendas
+% Courier New      → código fonte
+\usepackage{fontspec}
+
+\setmainfont{Times New Roman}
+\setsansfont{Calibri}[
+    BoldFont       = Calibri Bold,
+    ItalicFont     = Calibri Italic,
+    BoldItalicFont = Calibri Bold Italic
+]
+\setmonofont{Courier New}
 
 % --- Geometria da página ---
 \usepackage[
@@ -23,20 +37,52 @@
 \usepackage{setspace}
 \onehalfspacing
 
-% --- Cabeçalhos e rodapés ---
+% --- Formatação de headings com titlesec ---
+% Heading 1 → chapter  : Calibri Bold 18pt
+% Heading 2 → section  : Calibri Bold 16pt
+% Heading 3 → subsection   : Calibri Bold 14pt
+% Heading 4 → subsubsection: Calibri 12pt
+% Heading 5 → paragraph    : Calibri 12pt
+\usepackage{titlesec}
+
+\titleformat{\chapter}[block]
+    {\sffamily\bfseries\fontsize{18}{22}\selectfont}
+    {\thechapter.}{0.5em}{}
+\titlespacing*{\chapter}{0pt}{0pt}{18pt}
+
+\titleformat{\section}
+    {\sffamily\bfseries\fontsize{16}{20}\selectfont}
+    {\thesection}{0.5em}{}
+\titlespacing*{\section}{0pt}{18pt}{6pt}
+
+\titleformat{\subsection}
+    {\sffamily\bfseries\fontsize{14}{18}\selectfont}
+    {\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{14pt}{4pt}
+
+\titleformat{\subsubsection}
+    {\sffamily\fontsize{12}{15}\selectfont}
+    {\thesubsubsection}{0.5em}{}
+\titlespacing*{\subsubsection}{0pt}{12pt}{4pt}
+
+\titleformat{\paragraph}[hang]
+    {\sffamily\fontsize{12}{15}\selectfont}
+    {\theparagraph}{0.5em}{}
+\titlespacing*{\paragraph}{0pt}{10pt}{4pt}
+
+% --- Cabeçalhos e rodapés — Calibri 10pt ---
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE]{\leftmark}
-\fancyhead[RO]{\rightmark}
-\fancyfoot[C]{\thepage}
+\fancyhead[LE]{\sffamily\fontsize{10}{12}\selectfont\leftmark}
+\fancyhead[RO]{\sffamily\fontsize{10}{12}\selectfont\rightmark}
+\fancyfoot[C]{\sffamily\fontsize{10}{12}\selectfont\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Redefinir plain style (páginas de início de capítulo)
 \fancypagestyle{plain}{
     \fancyhf{}
-    \fancyfoot[C]{\thepage}
+    \fancyfoot[C]{\sffamily\fontsize{10}{12}\selectfont\thepage}
     \renewcommand{\headrulewidth}{0pt}
 }
 
@@ -57,7 +103,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 
-% --- Código fonte ---
+% --- Código fonte — monospace Courier New via fontspec ---
 \usepackage{listings}
 \lstset{
     basicstyle=\ttfamily\small,
@@ -72,14 +118,7 @@
     framexleftmargin=15pt,
     captionpos=b,
     tabsize=4,
-    showstringspaces=false,
-    inputencoding=utf8,
-    extendedchars=true,
-    literate=
-        {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
-        {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
-        {à}{{\`a}}1 {ã}{{\~a}}1 {õ}{{\~o}}1
-        {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1
+    showstringspaces=false
 }
 
 % --- Hiperligações ---
@@ -104,19 +143,15 @@
 ]{biblatex}
 \addbibresource{backmatter/referencias.bib}
 
-% --- Legendas ---
-% Separador " – " conforme norma do modelo Word do IPG
+% --- Legendas — Calibri 10pt com separador travessão (–) ---
 \usepackage{caption}
-\captionsetup{
-    font=small,
-    labelfont=bf,
-    format=hang,
-    labelsep=none,
-    textformat=period
-}
-% Redefinir o separador para " – " (travessão)
 \DeclareCaptionLabelSeparator{travessao}{ \textendash\ }
-\captionsetup{labelsep=travessao}
+\captionsetup{
+    font={sf,small},
+    labelfont={sf,bf,small},
+    format=hang,
+    labelsep=travessao
+}
 
 % --- Subcapturas ---
 \usepackage{subcaption}
@@ -128,7 +163,7 @@
 % --- Enumerações e listas ---
 \usepackage{enumitem}
 
-% --- PDF pages (para incluir PDFs, se necessário) ---
+% --- PDF pages (para incluir PDFs nos anexos) ---
 \usepackage{pdfpages}
 
 % --- Numeração de figuras e tabelas por capítulo ---
@@ -139,19 +174,11 @@
 \counterwithin{lstlisting}{chapter}
 
 % --- Profundidade do índice ---
-% tocdepth: 1=section, 2=subsection, 3=subsubsection
-% secnumdepth: nível máximo numerado (4=paragraph)
+% tocdepth     3 → até subsubsection no índice
+% secnumdepth  4 → até paragraph numerado
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{4}
 
-% Estilo do \paragraph para funcionar como Heading 5
-\makeatletter
-\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}%
-    {1.5ex \@plus 1ex \@minus .2ex}%
-    {0.5em}%
-    {\normalfont\normalsize\bfseries}}
-\makeatother
-
-% --- Glossário / Acrónimos (opcional) ---
+% --- Glossário / Acrónimos ---
 \usepackage[acronym,nonumberlist,toc]{glossaries}
 \makeglossaries
