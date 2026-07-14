@@ -94,7 +94,7 @@ Em alternativa, no GitHub: botão verde **Code → Download ZIP**.
 
 ### Opção C - Overleaf
 
-No GitHub, **Code → Download ZIP** e, no Overleaf, **New Project → Upload Project** e enviar o ZIP. O ficheiro [`latexmkrc`](latexmkrc) já força o XeLaTeX automaticamente no Overleaf.
+No GitHub, **Code → Download ZIP** e, no Overleaf, **New Project → Upload Project** e enviar o ZIP. **Importante:** no Overleaf, abre **Menu → Compiler** e escolhe **XeLaTeX** (o Overleaf usa pdfLaTeX por defeito, e este template precisa de XeLaTeX).
 
 ---
 
@@ -373,7 +373,7 @@ Sim. Tem por base o Mestrado em Computação Móvel, mas serve qualquer curso do
 Não muito. O template já está montado; na maioria dos casos só preenches texto e segues os comentários-guia em cada ficheiro.
 
 **Posso usar no Overleaf ou só localmente?**
-Ambos. O `latexmkrc` já força o XeLaTeX no Overleaf e em local. Ver [Como descarregar](#como-descarregar).
+Ambos. Em local, o `latexmkrc` já usa o XeLaTeX. No Overleaf, define o motor em **Menu → Compiler → XeLaTeX** (por defeito o Overleaf usa pdfLaTeX). Ver [Como descarregar](#como-descarregar).
 
 **Que estilo de referências usa? Posso mudar para APA?**
 Por defeito usa **IEEE**. Podes trocar para APA, autor-data (Harvard/NP 405) ou numérico simples - ver [Estilo das referências](#estilo-das-referências---trocar-o-modelo).
