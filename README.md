@@ -92,9 +92,14 @@ cd TEMPLATE-IPG-LATEX
 
 Em alternativa, no GitHub: botão verde **Code → Download ZIP**.
 
-### Opção C - Overleaf
+### Opção C - Editar e compilar online (sem instalar nada)
 
-No GitHub, **Code → Download ZIP** e, no Overleaf, **New Project → Upload Project** e enviar o ZIP. **Importante:** no Overleaf, abre **Menu → Compiler** e escolhe **XeLaTeX** (o Overleaf usa pdfLaTeX por defeito, e este template precisa de XeLaTeX).
+Podes usar o template diretamente no browser:
+
+- **[Overleaf](https://www.overleaf.com/)** — **New Project → Upload Project** com o ZIP. **Importante:** abre **Menu → Settings → Compiler** e escolhe **XeLaTeX** (o Overleaf usa pdfLaTeX por defeito, e este template precisa de XeLaTeX).
+- **[Prism (OpenAI)](https://prism.openai.com/)** — editor LaTeX com IA, gratuito e no browser. Também compila e faz preview; garante que o motor está em **XeLaTeX** (por causa do `fontspec`).
+
+> Nota: em compiladores no browser, as fontes Times New Roman / Calibri (do Windows/Office) podem não estar instaladas e ser substituídas por equivalentes. O documento compila na mesma; para reproduzir exatamente as fontes oficiais, compila em local com XeLaTeX.
 
 ---
 
