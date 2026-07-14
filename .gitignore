@@ -19,7 +19,7 @@
 *.log
 *.out
 *.run.xml
-*.synctex.gz
+*.synctex*
 *.toc
 *.lof
 *.lot
@@ -39,7 +39,6 @@
 *.idx
 *.ilg
 *.ind
-*.bcf-SAVE-ERROR
 *.nav
 *.snm
 *.vrb

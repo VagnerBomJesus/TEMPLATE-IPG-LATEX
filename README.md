@@ -21,6 +21,8 @@ Baseado no modelo oficial **Modelo_Relatório_Mestrado Computacao Movel_Pt.docx*
 > **Repositório:** <https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX>
 > **Licença:** GPL-3.0 (ver [`LICENSE`](LICENSE)). Ao reutilizar ou editar, mantém o crédito ao autor base.
 
+**Descarregar agora:** [descarregar o template completo em ZIP](https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX/archive/refs/heads/main.zip) (um clique, pronto a usar).
+
 ---
 
 ## Índice
@@ -84,9 +86,11 @@ git clone https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX.git
 cd TEMPLATE-IPG-LATEX
 ```
 
-### Opção B - descarregar ZIP
+### Opção B - descarregar ZIP (um clique)
 
-No GitHub, botão verde **Code → Download ZIP**, depois extrair a pasta.
+**[Descarregar o projeto completo em ZIP](https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX/archive/refs/heads/main.zip)** — pronto a usar; depois é só extrair a pasta.
+
+Em alternativa, no GitHub: botão verde **Code → Download ZIP**.
 
 ### Opção C - Overleaf
 

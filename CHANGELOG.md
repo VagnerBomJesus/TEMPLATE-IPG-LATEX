@@ -13,6 +13,15 @@ Todas as alterações relevantes deste projeto são documentadas neste ficheiro.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e o versionamento segue [SemVer](https://semver.org/lang/pt-BR/).
 
+## [1.0.1] - 2026-07-14
+
+### Corrigido
+
+- `preamble.tex` estava truncado na v1.0.0 (ficheiro cortado a meio), o que impedia a compilação. Reescrito completo — o template volta a compilar (XeLaTeX + biber).
+- `.gitignore` completado: passa a ignorar o `*.xdv` do XeLaTeX e ficheiros temporários do Office.
+
+[1.0.1]: https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX/releases/tag/v1.0.1
+
 ## [1.0.0] - 2026-07-14
 
 Primeira versão estável do template LaTeX para o Instituto Politécnico da Guarda (IPG).
