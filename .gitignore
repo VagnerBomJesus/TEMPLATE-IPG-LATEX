@@ -1,3 +1,14 @@
+# =============================================================================
+# Template LaTeX IPG  —  https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+# Autor base, criador e mantenedor do projeto:
+#     Vagner Bom Jesus  (@VagnerBomJesus)
+#
+# Proprietario e autor original deste template. Ao reutilizar, distribuir ou
+# editar, MANTER este credito ao autor base (nao remover). Quem usa o template
+# e o autor do SEU relatorio; o criador base do modelo e Vagner Bom Jesus.
+# Licenca: GPL-3.0 (ver LICENSE).
+# =============================================================================
+
 # LaTeX auxiliary files
 *.aux
 *.bbl
@@ -20,12 +31,29 @@
 *.acr
 *.alg
 
+# XeLaTeX (ficheiro intermédio) e outros auxiliares
+*.xdv
+*.glsdefs
+*.lol
+*.loa
+*.idx
+*.ilg
+*.ind
+*.bcf-SAVE-ERROR
+*.nav
+*.snm
+*.vrb
+
 # Generated PDF (uncomment to track)
 # *.pdf
 
 # OS files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Ficheiros temporários/lock do Office (ex.: ~$Modelo....docx)
+~$*
 
 # Editor files
 *.swp

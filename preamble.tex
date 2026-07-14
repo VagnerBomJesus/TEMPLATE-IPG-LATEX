@@ -1,4 +1,15 @@
 % =============================================================================
+% Template LaTeX IPG  —  https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+% Autor base, criador e mantenedor do projeto:
+%     Vagner Bom Jesus  (@VagnerBomJesus)
+%
+% Proprietario e autor original deste template. Ao reutilizar, distribuir ou
+% editar, MANTER este credito ao autor base (nao remover). Quem usa o template
+% e o autor do SEU relatorio; o criador base do modelo e Vagner Bom Jesus.
+% Licenca: GPL-3.0 (ver LICENSE).
+% =============================================================================
+
+% =============================================================================
 % Preâmbulo — Pacotes e Configurações
 %
 % IMPORTANTE: Este template requer XeLaTeX ou LuaLaTeX (NÃO pdflatex)
@@ -107,11 +118,11 @@
 \usepackage{listings}
 \lstset{
     basicstyle=\ttfamily\small,
-    keywordstyle=\color{azulIPG}\bfseries,
-    commentstyle=\color{gray},
-    stringstyle=\color{red!70!black},
+    keywordstyle=\bfseries,
+    commentstyle=\itshape,
+    stringstyle=\color{black},
     numbers=left,
-    numberstyle=\tiny\color{gray},
+    numberstyle=\tiny,
     numbersep=8pt,
     breaklines=true,
     frame=single,
@@ -125,60 +136,51 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    linkcolor=azulIPG,
-    citecolor=azulIPG,
-    urlcolor=azulIPG,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black,
     bookmarksnumbered=true,
     pdfauthor={\nomeAutor},
-    pdftitle={\tituloRelatorio}
+    pdftitle={\tituloRelatorio},
+    % Crédito ao criador base do template nos metadados do PDF (não remover):
+    pdfcreator={Template LaTeX IPG criado por Vagner Bom Jesus (@VagnerBomJesus) -- github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX},
+    pdfproducer={XeLaTeX -- Template base de Vagner Bom Jesus (@VagnerBomJesus)}
 }
 
+% --- Aspas (recomendado pelo biblatex; carregar antes) ---
+\usepackage{csquotes}
+
 % --- Bibliografia ---
+% =============================================================================
+% ESTILO DAS REFERÊNCIAS — escolher UM. Deixar um bloco ativo e comentar (%)
+% todos os outros. Depois de trocar, apagar os ficheiros auxiliares e
+% recompilar com: xelatex -> biber -> xelatex -> xelatex  (ou latexmk -xelatex).
+% Todos os blocos mantêm natbib=true para que \citet e \citep continuem a
+% funcionar; em IEEE o comando idiomático é \cite (dá [1], [2], ...).
+% =============================================================================
+
+% ---- ATIVO: IEEE (numérico, citações [1], por ordem de citação) ----
 \usepackage[
     backend=biber,
-    style=authoryear,
-    sorting=nyt,
+    style=ieee,
+    sorting=none,
     natbib=true,
     maxbibnames=99
 ]{biblatex}
-\addbibresource{backmatter/referencias.bib}
 
-% --- Legendas — Calibri 10pt com separador travessão (–) ---
-\usepackage{caption}
-\DeclareCaptionLabelSeparator{travessao}{ \textendash\ }
-\captionsetup{
-    font={sf,small},
-    labelfont={sf,bf,small},
-    format=hang,
-    labelsep=travessao
-}
+% ---- OPÇÃO: APA 7.ª ed. (autor-data; requer o pacote biblatex-apa) ----
+% \usepackage[
+%     backend=biber,
+%     style=apa,
+%     sorting=nyt,
+%     natbib=true,
+%     maxbibnames=99
+% ]{biblatex}
 
-% --- Subcapturas ---
-\usepackage{subcaption}
-
-% --- Indentação do primeiro parágrafo ---
-\usepackage{indentfirst}
-\setlength{\parindent}{1.25cm}
-
-% --- Enumerações e listas ---
-\usepackage{enumitem}
-
-% --- PDF pages (para incluir PDFs nos anexos) ---
-\usepackage{pdfpages}
-
-% --- Numeração de figuras e tabelas por capítulo ---
-\usepackage{chngcntr}
-\counterwithin{figure}{chapter}
-\counterwithin{table}{chapter}
-\counterwithin{equation}{chapter}
-\counterwithin{lstlisting}{chapter}
-
-% --- Profundidade do índice ---
-% tocdepth     3 → até subsubsection no índice
-% secnumdepth  4 → até paragraph numerado
-\setcounter{tocdepth}{3}
-\setcounter{secnumdepth}{4}
-
-% --- Glossário / Acrónimos ---
-\usepackage[acronym,nonumberlist,toc]{glossaries}
-\makeglossaries
+% ---- OPÇÃO: Autor-data / Harvard (NP 405 — era o estilo anterior) ----
+% \usepackage[
+%     backend=biber,
+%     style=authoryear,
+%     sorting=nyt,
+%     natbib=true,
+%     maxbibna

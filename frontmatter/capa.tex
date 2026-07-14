@@ -1,4 +1,15 @@
 % =============================================================================
+% Template LaTeX IPG  —  https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+% Autor base, criador e mantenedor do projeto:
+%     Vagner Bom Jesus  (@VagnerBomJesus)
+%
+% Proprietario e autor original deste template. Ao reutilizar, distribuir ou
+% editar, MANTER este credito ao autor base (nao remover). Quem usa o template
+% e o autor do SEU relatorio; o criador base do modelo e Vagner Bom Jesus.
+% Licenca: GPL-3.0 (ver LICENSE).
+% =============================================================================
+
+% =============================================================================
 % Capa do Relatório — baseada no modelo oficial IPG
 % =============================================================================
 
@@ -6,7 +17,14 @@
     \begin{center}
 
         % --- Logo IPG ---
+        % Escolher UM dos logótipos: deixar um ativo e o outro comentado (%).
+        % Para trocar, basta inverter os comentários das duas linhas.
+        %
+        % Opção 1 — logótipo vertical/empilhado (POLI / TÉCNICO / GUARDA):
         \includegraphics[width=6cm]{image1.png}
+        %
+        % Opção 2 — logótipo horizontal, numa só linha (POLI TÉCNICO GUARDA):
+        %\includegraphics[width=14cm]{image2.png}
 
         \vspace{0.8cm}
 
@@ -17,7 +35,7 @@
         \vspace{1.5cm}
 
         % --- Título ---
-        {\LARGE\textbf{\color{azulIPG}\tituloRelatorio}}
+        {\LARGE\textbf{\tituloRelatorio}}
 
         % --- Subtítulo (remover a linha seguinte se não houver subtítulo) ---
         \vspace{0.4cm}
@@ -29,7 +47,7 @@
         {\normalsize
             \tipoRelatorio\ submetido como requisito parcial para a obtenção do grau de\\[0.3cm]
             \textbf{Mestre em Computação Móvel}
-        }
+      }
 
         \vspace{1cm}
 

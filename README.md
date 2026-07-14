@@ -1,135 +1,301 @@
-# Template LaTeX — Mestrado em Computação Móvel (IPG)
+<!--
+=============================================================================
+Template LaTeX IPG - https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+Autor base, criador e mantenedor do projeto: Vagner Bom Jesus (@VagnerBomJesus)
+Ao reutilizar, distribuir ou editar, MANTER o crédito ao autor base.
+Licença: GPL-3.0 (ver LICENSE).
+=============================================================================
+-->
 
-Modelo em LaTeX para dissertações, relatórios de estágio e projeto da ESTG — Instituto Politécnico da Guarda (IPG), Portugal.
+<p align="center">
+  <img src="images/image2.png" alt="Instituto Politécnico da Guarda (IPG)" width="980">
+</p>
+
+# Template LaTeX - Mestrado em Computação Móvel (IPG)
+
+Modelo em LaTeX para dissertações, relatórios de estágio e de projeto da ESTG - Instituto Politécnico da Guarda (IPG), Portugal.
 
 Baseado no modelo oficial **Modelo_Relatório_Mestrado Computacao Movel_Pt.docx** fornecido pela instituição.
 
+> **Autor base / criador / mantenedor:** Vagner Bom Jesus ([@VagnerBomJesus](https://github.com/VagnerBomJesus))
+> **Repositório:** <https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX>
+> **Licença:** GPL-3.0 (ver [`LICENSE`](LICENSE)). Ao reutilizar ou editar, mantém o crédito ao autor base.
+
 ---
 
-## Estrutura do Projeto
+## Índice
+
+1. [Âmbito de utilização](#âmbito-de-utilização)
+2. [Como descarregar](#como-descarregar)
+3. [Estrutura do projeto](#estrutura-do-projeto)
+4. [Como compilar (por defeito)](#como-compilar-por-defeito)
+5. [Estilo das referências - trocar o modelo](#estilo-das-referências---trocar-o-modelo)
+6. [Logótipo - trocar](#logótipo---trocar)
+7. [Como usar](#como-usar)
+8. [Estrutura e conteúdo do relatório](#estrutura-e-conteúdo-do-relatório)
+9. [Formatação](#formatação)
+10. [Pacotes utilizados](#pacotes-utilizados)
+11. [Perguntas frequentes (FAQ)](#perguntas-frequentes-faq)
+12. [Contribuir](#contribuir)
+13. [Autor e créditos](#autor-e-créditos)
+14. [Licença](#licença)
+
+---
+
+## Âmbito de utilização
+
+Este projeto **tem por base o modelo do Mestrado em Computação Móvel**, mas **pode ser usado por qualquer curso do Politécnico da Guarda** - CTeSP, licenciatura, mestrado ou pós-graduação - para elaborar o relatório de estágio/projeto, o Trabalho Final de Curso (TFC) ou a dissertação final.
+
+Basta **respeitar as especificidades e regras próprias de cada curso** (estrutura exigida, tipo de trabalho, capa e requisitos da respetiva escola) e adaptar os dados em `main.tex`. O template serve igualmente qualquer escola do IPG (ESTG, ESECD, ESS, ESTH).
+
+### Cursos da área de informática do IPG que podem usar este template
+
+**CTeSP (nível 5):**
+
+- Análise de Dados
+- Cibersegurança
+- Desenvolvimento de Aplicações Informáticas
+- Infraestruturas de Cloud, Redes e Data Center
+- Testes de Software
+- Relacionados: Comunicação Digital, Multimédia e Artes Performativas
+
+**Licenciaturas (1.º ciclo):**
+
+- Engenharia Informática
+- Ciência de Dados e Inteligência Artificial
+- Mecânica e Informática Industrial
+- Relacionado: Comunicação Multimédia
+
+**Mestrados (2.º ciclo):**
+
+- Computação Móvel
+- Cibersegurança
+
+> A oferta formativa do IPG muda de ano para ano. Confirma sempre a lista atualizada e as regras específicas do teu curso em [politecnicoguarda.pt](https://politecnicoguarda.pt/). Nota: Qualquer outro curso ou escola pode usar o template, adaptando a capa e a estrutura.
+
+---
+
+## Como descarregar
+
+### Opção A - clonar com Git (recomendado)
+
+```bash
+git clone https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX.git
+cd TEMPLATE-IPG-LATEX
+```
+
+### Opção B - descarregar ZIP
+
+No GitHub, botão verde **Code → Download ZIP**, depois extrair a pasta.
+
+### Opção C - Overleaf
+
+No GitHub, **Code → Download ZIP** e, no Overleaf, **New Project → Upload Project** e enviar o ZIP. O ficheiro [`latexmkrc`](latexmkrc) já força o XeLaTeX automaticamente no Overleaf.
+
+---
+
+## Estrutura do projeto
 
 ```
 TEMPLATE-IPG-LATEX/
 ├── main.tex                          # Ficheiro principal (compilar este)
-├── preamble.tex                      # Pacotes, configurações e estilos
+├── preamble.tex                      # Pacotes, configurações, estilos e estilo das referências
+├── latexmkrc                         # Força XeLaTeX (local e Overleaf)
+├── .gitignore                        # Ignora ficheiros auxiliares
+├── LICENSE                           # GPL-3.0
+├── README.md                         # Este ficheiro
+├── CONTRIBUTING.md                   # Regras para contribuir
 │
 ├── frontmatter/                      # Páginas iniciais
-│   ├── capa.tex                      # Capa do relatório
-│   ├── citacao.tex                   # Citação motivacional
+│   ├── capa.tex                      # Capa (2 logótipos prontos: comentar/descomentar)
+│   ├── citacao.tex                   # Citação
 │   ├── dedicatoria.tex               # Dedicatória (opcional)
 │   ├── agradecimentos.tex            # Agradecimentos
-│   ├── resumo.tex                    # Resumo + Palavras-chave (PT)
-│   ├── abstract.tex                  # Abstract + Keywords (EN)
+│   ├── resumo.tex                    # Resumo + palavras-chave (PT)
+│   ├── abstract.tex                  # Abstract + keywords (EN)
 │   └── simbolos_acronimos.tex        # Símbolos e Acrónimos (opcional)
 │
-├── chapters/                         # Capítulos do relatório
-│   ├── 01_introducao.tex             # Cap. 1 — Introdução
-│   ├── 02_trabalho_relacionado.tex   # Cap. 2 — Trabalho Relacionado
-│   ├── 03_desenvolvimento.tex        # Cap. 3 — Desenvolvimento
-│   ├── 04_testes_resultados.tex      # Cap. 4 — Testes e Resultados
-│   └── 05_conclusoes.tex             # Cap. 5 — Conclusões
+├── chapters/                         # Capítulos
+│   ├── 01_introducao.tex
+│   ├── 02_trabalho_relacionado.tex   # inclui exemplos de citação
+│   ├── 03_desenvolvimento.tex
+│   ├── 04_testes_resultados.tex      # inclui figura de exemplo (image3.png)
+│   └── 05_conclusoes.tex
 │
 ├── backmatter/                       # Páginas finais
-│   ├── bibliografia.tex              # Referências bibliográficas
-│   ├── referencias.bib               # Ficheiro BibTeX
-│   └── anexos.tex                    # Anexos (A, B, ...)
+│   ├── bibliografia.tex              # \printbibliography (+ \nocite{*})
+│   ├── referencias.bib               # Base de dados de referências
+│   └── anexos.tex
 │
-├── images/                           # Imagens e figuras
+├── images/                           # Imagens e logótipos
+│   ├── image1.png                    # Logótipo IPG vertical (empilhado)
+│   ├── image2.png                    # Logótipo IPG horizontal (uma linha)
+│   └── image3.png                    # Figura de exemplo (tipos de gráficos)
+│
 └── Doc/                              # Modelo Word original do IPG
     └── Modelo_Relatório_Mestrado Computacao Movel_Pt.docx
 ```
 
 ---
 
-## Estrutura do Relatório
+## Como compilar (por defeito)
 
-O template segue rigorosamente a estrutura do modelo oficial IPG para Mestrado em Computação Móvel:
+### Pré-requisitos
+
+- [TeX Live](https://www.tug.org/texlive/) (completo) ou [MiKTeX](https://miktex.org/)
+- Compilador: **`xelatex`** (obrigatório - não usar `pdflatex`)
+- Gestor de bibliografia: **`biber`**
+- Fontes do sistema instaladas: **Times New Roman**, **Calibri** e **Courier New** (Windows/Office)
+
+> Este template usa **XeLaTeX** para aceder diretamente às fontes do sistema e reproduzir fielmente o modelo Word oficial do IPG.
+
+### Sequência de compilação (obrigatória por causa das referências)
+
+```bash
+xelatex main.tex
+biber main
+xelatex main.tex
+xelatex main.tex
+```
+
+### Com latexmk (recomendado)
+
+O ficheiro `latexmkrc` já define o XeLaTeX, por isso basta:
+
+```bash
+latexmk main.tex
+```
+
+Limpar os ficheiros auxiliares:
+
+```bash
+latexmk -c
+```
+
+> **Importante:** se só correres `xelatex` uma vez (sem o `biber`), a secção de referências fica vazia. Corre sempre a sequência completa - ou usa o `latexmk`.
+
+---
+
+## Estilo das referências - trocar o modelo
+
+**Por defeito o template usa o estilo IEEE** (numérico: `[1]`, `[2]`, ordenado por ordem de citação).
+
+Para trocar de estilo, abre o [`preamble.tex`](preamble.tex), secção **"ESTILO DAS REFERÊNCIAS"**. Estão lá **4 blocos** prontos: deixa **um** ativo e **comenta os outros** com `%`.
+
+| Estilo | Como fica | Bloco no `preamble.tex` | Pacote necessário |
+|--------|-----------|--------------------------|-------------------|
+| **IEEE** *(ativo por defeito)* | `[1]`, `[2]`, por ordem de citação | `style=ieee, sorting=none` | `biblatex-ieee` |
+| APA 7.ª ed. | `(Autor, ano)` autor-data | `style=apa, sorting=nyt` | `biblatex-apa` |
+| Autor-data / Harvard (NP 405) | `(Autor, ano)` | `style=authoryear, sorting=nyt` | (base) |
+| Numérico simples | `[1]` ordenado por nome | `style=numeric-comp, sorting=nyt` | (base) |
+
+Passos:
+
+1. Comentar (`%`) o bloco IEEE e descomentar o bloco desejado (só **um** ativo).
+2. Apagar os ficheiros auxiliares (`.aux`, `.bbl`, `.bcf`, `.run.xml`).
+3. Recompilar a sequência completa (`xelatex → biber → xelatex → xelatex`, ou `latexmk`).
+
+> Todos os blocos mantêm `natbib=true`, por isso `\citet{}`/`\citep{}` funcionam em qualquer estilo. Em IEEE o comando idiomático é `\cite{}` (dá `[1]`).
+
+### Mostrar todas as referências vs. só as citadas
+
+O `backmatter/bibliografia.tex` tem `\nocite{*}`, que imprime **todas** as entradas do `.bib` (útil para ver o modelo). Para listar **apenas** as referências efetivamente citadas no texto, comenta ou remove essa linha.
+
+---
+
+## Logótipo - trocar
+
+A capa ([`frontmatter/capa.tex`](frontmatter/capa.tex)) já traz **os dois logótipos prontos**, um ativo e o outro comentado. Para trocar, basta inverter o `%`:
+
+```latex
+% Opção 1 - vertical/empilhado:
+\includegraphics[width=6cm]{image1.png}
+%
+% Opção 2 - horizontal, numa linha:
+% \includegraphics[width=12cm]{image2.png}
+```
+
+---
+
+## Como usar
+
+### 1. Preencher os dados em `main.tex`
+
+```latex
+\newcommand{\tituloRelatorio}{Título do Meu Relatório}
+\newcommand{\subtituloRelatorio}{Subtítulo se necessário}
+\newcommand{\nomeAutor}{Nome Completo do Autor}
+\newcommand{\numeroAluno}{Número do Aluno}
+\newcommand{\nomeOrientador}{Prof. Doutor Nome Orientador}
+\newcommand{\nomeCoorientador}{Prof. Doutor Nome Coorientador} % remover da capa se não houver
+\newcommand{\mesAno}{Junho | 2025}
+\newcommand{\anoLetivo}{2024/2025}
+\newcommand{\tipoRelatorio}{Relatório de Projeto Aplicado} % ou: Estágio Profissionalizante | Dissertação
+```
+
+### 2. Editar os capítulos
+
+Editar os ficheiros em `chapters/` seguindo as orientações em comentário em cada um.
+
+### 3. Gerir referências
+
+Adicionar entradas em `backmatter/referencias.bib` e citar no texto com `\cite{chave}` (IEEE → `[n]`), ou `\citet{chave}`/`\citep{chave}`.
+
+### 4. Adicionar imagens
+
+Colocar em `images/` e incluir com:
+
+```latex
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{nome_ficheiro.png}
+    \caption{Descrição da figura \citep{chave}.} % citar se for de outro autor
+    \label{fig:identificador}
+\end{figure}
+```
+
+Referenciar sempre no texto com `Figura~\ref{fig:identificador}`.
+
+### 5. Secções opcionais
+
+- **Dedicatória** - apagar `\input{frontmatter/dedicatoria}` em `main.tex` se não aplicável.
+- **Coorientador** - remover da capa em `frontmatter/capa.tex` se não existir.
+- **Símbolos / Acrónimos** - remover subsecções em `frontmatter/simbolos_acronimos.tex` se não aplicável.
+- **Anexos** - adicionar/remover em `backmatter/anexos.tex`.
+
+---
+
+## Estrutura e conteúdo do relatório
+
+O template segue a estrutura do modelo oficial IPG para o Mestrado em Computação Móvel:
 
 | Secção | Ficheiro | Notas |
 |--------|----------|-------|
 | Capa | `frontmatter/capa.tex` | Título, autor, n.º aluno, orientadores, instituição, data |
-| Citação | `frontmatter/citacao.tex` | Frase motivacional à escolha |
-| Dedicatória | `frontmatter/dedicatoria.tex` | **Opcional** — apagar se não aplicável |
+| Citação | `frontmatter/citacao.tex` | Frase à escolha |
+| Dedicatória | `frontmatter/dedicatoria.tex` | **Opcional** |
 | Agradecimentos | `frontmatter/agradecimentos.tex` | Orientadores, escola, família, etc. |
 | Resumo | `frontmatter/resumo.tex` | Máx. 400 palavras + palavras-chave (PT) |
 | Abstract | `frontmatter/abstract.tex` | Máx. 400 palavras + keywords (EN) |
-| Índice Geral | `main.tex` | Gerado automaticamente |
-| Índice de Figuras | `main.tex` | Gerado automaticamente |
-| Índice de Tabelas | `main.tex` | Gerado automaticamente |
-| Símbolos e Acrónimos | `frontmatter/simbolos_acronimos.tex` | **Opcional** — remover secções não aplicáveis |
-| Cap. 1 — Introdução | `chapters/01_introducao.tex` | Contexto/Motivação, Problema/Objetivos, Solução, Organização |
-| Cap. 2 — Trabalho Relacionado | `chapters/02_trabalho_relacionado.tex` | Métodos/Tecnologias, Soluções Existentes |
-| Cap. 3 — Desenvolvimento | `chapters/03_desenvolvimento.tex` | Requisitos, Arquitetura, Módulos, Protótipo |
-| Cap. 4 — Testes e Resultados | `chapters/04_testes_resultados.tex` | Teste A, Teste B, ..., Discussão |
-| Cap. 5 — Conclusões | `chapters/05_conclusoes.tex` | Síntese, Contribuições, Limitações, Trabalho Futuro |
-| Referências Bibliográficas | `backmatter/bibliografia.tex` | Ordem alfabética, estilo Autor-Data |
-| Anexo A | `backmatter/anexos.tex` | Material suplementar |
-| Anexo B | `backmatter/anexos.tex` | Material suplementar adicional |
+| Índices (geral, figuras, tabelas) | `main.tex` | Gerados automaticamente |
+| Símbolos e Acrónimos | `frontmatter/simbolos_acronimos.tex` | **Opcional** |
+| Cap. 1 - Introdução | `chapters/01_introducao.tex` | Contexto/Motivação, Problema/Objetivos, Solução, Organização |
+| Cap. 2 - Trabalho Relacionado | `chapters/02_trabalho_relacionado.tex` | Métodos/Tecnologias, Soluções Existentes |
+| Cap. 3 - Desenvolvimento | `chapters/03_desenvolvimento.tex` | Requisitos, Arquitetura, Módulos, Protótipo |
+| Cap. 4 - Testes e Resultados | `chapters/04_testes_resultados.tex` | Teste A, Teste B, …, Discussão |
+| Cap. 5 - Conclusões | `chapters/05_conclusoes.tex` | Síntese, Contribuições, Limitações, Trabalho Futuro |
+| Referências | `backmatter/bibliografia.tex` | Estilo IEEE por defeito |
+| Anexos | `backmatter/anexos.tex` | Material suplementar |
 
----
+Cada ficheiro traz, em comentário, as perguntas-guia a responder em cada secção (contexto, problema, objetivos mensuráveis, arquitetura, tipos de teste, etc.).
 
-## Conteúdo de Cada Secção
+### O que escrever em cada capítulo
 
-### Resumo / Abstract
-- Máximo **400 palavras**
-- Responder a: motivação do projeto → problema → solução implementada → como foi testada → resultados → contribuição para o estado da arte → conclusões
-
-### Cap. 1 — Introdução
-
-| Secção | O que responder |
-|--------|----------------|
-| 1.1 Contexto e Motivação | Em que contexto foi desenvolvido? Qual a área científica? Quem são os agentes envolvidos? Porque é relevante? |
-| 1.2 Definição do Problema e Objetivos | Qual o problema do mundo real? Qual o problema técnico? Quais os objetivos mensuráveis (funcionalidades, componentes I&D)? |
-| 1.3 Solução Proposta | Visão geral da solução (software/hardware). Principais tecnologias usadas. |
-| 1.4 Organização do Relatório | Um parágrafo por capítulo descrevendo o seu assunto. |
-
-### Cap. 2 — Trabalho Relacionado
-
-| Secção | O que responder |
-|--------|----------------|
-| 2.1 Métodos e Tecnologias Para... | Quais os métodos, ferramentas e tecnologias usados? Como se relacionam com as partes do problema? |
-| 2.2 Soluções Existentes Para... | Metodologia de pesquisa usada. Características técnicas de cada solução. Como difere da solução proposta? |
-
-> Este capítulo demonstra o conhecimento abrangente do autor e que o trabalho foi fundamentado nesse conhecimento.
-
-### Cap. 3 — Desenvolvimento
-
-| Secção | O que responder |
-|--------|----------------|
-| 3.1 Análise de Requisitos | Processos, dados, restrições operacionais, utilizadores do sistema e como se relacionam entre si. |
-| 3.2 Arquitetura do Sistema | Diagrama com todos os módulos e fluxos de dados + descrição genérica. |
-| 3.3 Implementação do Módulo A | Como foi implementado? Usar diagramas, figuras, tabelas, equações e excertos de código. |
-| 3.4 Implementação do Módulo B | Repetir para cada módulo do diagrama de arquitetura. |
-| 3.x Implementação do Módulo... | Adicionar secções conforme necessário. |
-| 3.x Protótipo Final | Apresentar e descrever o protótipo final (software/hardware). |
-
-### Cap. 4 — Testes e Resultados
-
-Tipos de testes a considerar:
-- **Testes de Validação** — O sistema satisfaz os requisitos e especificações?
-- **Testes de Verificação** — O output do sistema é o pretendido?
-- **Testes de Avaliação** — Quão bom é o sistema comparado com outros?
-
-Cada teste deve responder a: o que se queria testar → como foi preparado e realizado → resultados → conclusões.
-
-> Sempre que possível usar testes padrão reconhecidos pela comunidade científica. Apresentar resultados com tabelas e gráficos. Incluir referência bibliográfica nas legendas quando figuras/tabelas forem de outros autores.
-
-### Cap. 5 — Conclusões
-
-Responder a: resumo do projeto (problema + solução) → resumo dos testes e resultados → contribuição para o estado da arte → limitações → sugestões de melhoria e trabalho futuro.
-
-### Referências Bibliográficas
-
-- Ordenadas **alfabeticamente** pelo último nome do primeiro autor
-- Esperam-se **algumas dezenas** de referências num relatório de mestrado
-- Usar referências com processo adequado de revisão científica (artigos, livros, conferências)
-- Situações obrigatórias: trabalhos de outros autores, opiniões/conclusões alheias, dados/figuras/tabelas de outros, informação técnica suplementar (fichas técnicas, manuais de API)
-
-### Símbolos e Acrónimos
-
-- Incluir **Símbolos** apenas se houver necessidade de referenciar diversos símbolos ao longo do relatório. Para símbolos usados pontualmente, descrevê-los no texto junto da equação.
-- Incluir **Acrónimos** para siglas e abreviaturas usadas no documento.
-- Remover a secção (ou o ficheiro inteiro) se não se aplicar.
+- **Cap. 1 - Introdução:** contexto e motivação do trabalho, definição do problema e objetivos (mensuráveis), solução proposta (visão de alto nível e tecnologias) e organização do relatório.
+- **Cap. 2 - Trabalho Relacionado:** estado da arte - métodos e tecnologias relevantes, soluções existentes e sua comparação, e a lacuna que o projeto vem preencher. Inclui exemplos de citação.
+- **Cap. 3 - Desenvolvimento:** análise de requisitos, arquitetura do sistema (diagrama de módulos e fluxos), implementação de cada módulo (com figuras, tabelas, equações e excertos de código) e protótipo final.
+- **Cap. 4 - Testes e Resultados:** testes de validação, verificação e avaliação - o que se testou, como foi preparado/executado, resultados (tabelas, figuras, equações) e discussão. Inclui uma figura de exemplo (`image3.png`).
+- **Cap. 5 - Conclusões:** síntese do trabalho (problema + solução), resumo dos resultados, contribuições para o estado da arte, limitações e sugestões de trabalho futuro.
 
 ---
 
@@ -142,177 +308,106 @@ Responder a: resumo do projeto (problema + solução) → resumo dos testes e re
 | Heading 2 (`\section`) | Calibri Bold, 16pt |
 | Heading 3 (`\subsection`) | Calibri Bold, 14pt |
 | Heading 4 (`\subsubsection`) | Calibri, 12pt |
-| Heading 5 (`\paragraph`) | Calibri, 12pt |
-| Cabeçalhos e rodapés | Calibri, 10pt |
-| Legendas (caption) | Calibri, 10pt |
+| Cabeçalhos, rodapés e legendas | Calibri, 10pt |
 | Código fonte | Courier New |
 | Espaçamento | 1,5 linhas |
-| Margens | A4 — superior/inferior 2,5 cm; interior 3 cm; exterior 2,5 cm |
+| Margens | A4 - sup./inf. 2,5 cm; interior 3 cm; exterior 2,5 cm |
 | Numeração de páginas | Romana no frontmatter; árabe nos capítulos |
-| Figuras e tabelas | Numeradas por capítulo: `Figura 3.1`, `Tabela 4.1` |
-| Equações | Numeradas por capítulo: `(4.1)` |
-| Legendas | Formato: `Figura X.Y – Título da figura.` (travessão) |
-| Cor institucional | Azul IPG `#00467F` |
+| Figuras/tabelas/equações | Numeradas por capítulo: `Figura 3.1`, `Tabela 4.1`, `(4.1)` |
+| Legendas | Formato: `Figura X.Y - Título` (separador a traço médio) |
+| Cor do texto | **Todo o documento a preto** (sem azul nem vermelho; hiperligações também a preto) |
 
-### Regras para Equações
+> A cor institucional azul IPG (`#00467F`) continua **definida** no `preamble.tex` (`azulIPG`) mas não está aplicada. Para a usar nalgum elemento, basta aplicar `\color{azulIPG}`.
 
-- Numerar todas as equações para referência no texto
-- Descrever **todas as variáveis** no texto, a seguir à equação (lista "Onde:")
-- Escrever variáveis sempre em **itálico**, tanto na equação como no texto
-- Usar a lista de símbolos no início do relatório se houver muitas equações com variáveis referenciadas ao longo do documento
+### Regras para equações
 
-### Regras para Figuras e Tabelas
+- Numerar todas as equações para referência no texto.
+- Descrever **todas as variáveis** a seguir à equação (lista "Onde:").
+- Variáveis sempre em **itálico**, na equação e no texto.
 
-- Formato de legenda: `Figura X.Y – Descrição (Autor, Ano).`
-- Incluir **referência bibliográfica** na legenda quando a figura/tabela for de outro autor
-- Usar o tipo de gráfico mais adequado para os dados apresentados
+### Regras para figuras e tabelas
 
----
-
-## Como Compilar
-
-### Pré-requisitos
-
-- [TeX Live](https://www.tug.org/texlive/) ou [MiKTeX](https://miktex.org/)
-- Compilador: **`xelatex`** (obrigatório para fontes Times New Roman e Calibri)
-- Gestor de bibliografia: `biber`
-- Fontes do sistema instaladas: **Times New Roman** e **Calibri** (incluídas no Windows e Office)
-
-> **Nota:** Este template usa `XeLaTeX` (não `pdflatex`) para aceder directamente às fontes do sistema operativo e reproduzir fielmente as fontes do modelo Word oficial do IPG.
-
-### Compilação manual (sequência obrigatória)
-
-```bash
-xelatex main.tex
-biber main
-xelatex main.tex
-xelatex main.tex
-```
-
-### Compilação com latexmk (recomendado)
-
-```bash
-latexmk -xelatex -bibtex main.tex
-```
-
-### Limpeza dos ficheiros auxiliares
-
-```bash
-latexmk -c
-```
+- Incluir **referência bibliográfica** na legenda quando a figura/tabela for de outro autor.
+- Referenciar sempre a figura/tabela no texto (`Figura~\ref{...}`).
 
 ---
 
-## Como Usar
-
-### 1. Preencher os dados em `main.tex`
-
-```latex
-\newcommand{\tituloRelatorio}{Título do Meu Relatório}
-\newcommand{\nomeAutor}{Nome Completo do Autor}
-\newcommand{\numeroAluno}{Número do Aluno}
-\newcommand{\nomeOrientador}{Prof. Doutor Nome Orientador}
-\newcommand{\nomeCoorientador}{Prof. Doutor Nome Coorientador} % remover da capa se não houver
-\newcommand{\mesAno}{Junho | 2025}
-\newcommand{\anoLetivo}{2024/2025}
-\newcommand{\tipoRelatorio}{Relatório de Estágio} % ou: Dissertação | Projeto
-```
-
-### 2. Editar os capítulos
-
-Editar os ficheiros em `chapters/` seguindo as orientações em comentário em cada ficheiro.
-
-### 3. Gerir referências bibliográficas
-
-Adicionar entradas em `backmatter/referencias.bib`:
-
-```bibtex
-@article{sobrenome2024,
-    author  = {Sobrenome, Nome},
-    title   = {Título do Artigo},
-    journal = {Nome da Revista},
-    year    = {2024},
-    volume  = {10},
-    pages   = {1--15}
-}
-
-@book{sobrenome2023,
-    author    = {Sobrenome, Nome},
-    title     = {Título do Livro},
-    publisher = {Editora},
-    year      = {2023},
-    address   = {Cidade}
-}
-
-@inproceedings{sobrenome2022,
-    author    = {Sobrenome, Nome},
-    title     = {Título do Artigo de Conferência},
-    booktitle = {Nome da Conferência},
-    year      = {2022},
-    pages     = {1--8}
-}
-```
-
-Citar no texto com `\citep{chave}` (entre parênteses) ou `\citet{chave}` (no texto).
-
-### 4. Adicionar imagens
-
-Colocar ficheiros de imagem na pasta `images/` e incluir com:
-
-```latex
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{nome_ficheiro.png}
-    \caption{Descrição da figura \citep{chave}.}
-    \label{fig:identificador}
-\end{figure}
-```
-
-### 5. Secções opcionais
-
-- **Dedicatória** — apagar `\input{frontmatter/dedicatoria}` em `main.tex` se não aplicável
-- **Coorientador** — remover da capa em `frontmatter/capa.tex` se não existir
-- **Símbolos** — remover subsecção em `frontmatter/simbolos_acronimos.tex` se não aplicável
-- **Acrónimos** — remover subsecção se não aplicável
-- **Anexos** — adicionar ou remover capítulos em `backmatter/anexos.tex`
-
----
-
-## Pacotes LaTeX Utilizados
+## Pacotes utilizados
 
 | Pacote | Finalidade |
 |--------|-----------|
-| `fontspec` | Fontes do sistema: Times New Roman e Calibri (requer XeLaTeX) |
-| `titlesec` | Formatação dos headings (tamanho e estilo por nível) |
+| `fontspec` | Fontes do sistema (Times New Roman, Calibri, Courier New) - requer XeLaTeX |
 | `babel` | Língua portuguesa |
-| `geometry` | Margens (A4, inner 3 cm, outer 2,5 cm) |
+| `titlesec` | Formatação dos headings |
+| `geometry` | Margens A4 |
 | `fancyhdr` | Cabeçalhos e rodapés (Calibri 10pt) |
 | `graphicx` | Inclusão de imagens |
-| `booktabs` | Tabelas de qualidade profissional |
-| `amsmath` / `amssymb` | Equações e símbolos matemáticos |
-| `listings` | Código fonte com realce de sintaxe |
-| `hyperref` | Hiperligações no PDF |
-| `biblatex` + `biber` | Gestão de referências (Autor-Data, NP 405) |
-| `xcolor` | Cores (azul IPG `#00467F`) |
-| `caption` | Legendas Calibri 10pt com separador travessão (–) |
-| `subcaption` | Subfiguras e subtabelas |
-| `longtable` | Tabelas de múltiplas páginas |
-| `setspace` | Espaçamento entre linhas |
-| `indentfirst` | Indentação do primeiro parágrafo |
+| `booktabs` / `array` / `longtable` | Tabelas |
+| `amsmath` / `amssymb` | Matemática |
+| `listings` | Código fonte |
+| `hyperref` | Hiperligações e metadados do PDF |
+| `biblatex` + `biber` | Referências (**IEEE** por defeito; APA/autor-data/numérico opcionais) |
+| `csquotes` | Aspas (recomendado pelo biblatex) |
+| `xcolor` | Cores (`azulIPG` definido) |
+| `caption` / `subcaption` | Legendas e subfiguras |
+| `setspace` / `indentfirst` | Espaçamento e indentação |
 | `pdfpages` | Inclusão de PDFs nos anexos |
-| `glossaries` | Acrónimos e glossário |
+| `chngcntr` | Numeração de figuras/tabelas/equações por capítulo |
+| `glossaries` | Acrónimos/glossário |
 
 ---
 
-## Instituto Politécnico da Guarda
+## Perguntas frequentes (FAQ)
+
+**Como escrevo o meu relatório, tese ou dissertação do IPG em LaTeX?**
+Descarrega este template, abre o `main.tex`, preenche os teus dados e edita os capítulos em `chapters/`. Compila com XeLaTeX + biber (ou `latexmk`).
+
+**Este template serve para o meu curso?**
+Sim. Tem por base o Mestrado em Computação Móvel, mas serve qualquer curso do Politécnico da Guarda (CTeSP, licenciatura, mestrado ou pós-graduação) - ver [Âmbito de utilização](#âmbito-de-utilização). Respeita sempre as regras específicas do teu curso.
+
+**Preciso de saber LaTeX?**
+Não muito. O template já está montado; na maioria dos casos só preenches texto e segues os comentários-guia em cada ficheiro.
+
+**Posso usar no Overleaf ou só localmente?**
+Ambos. O `latexmkrc` já força o XeLaTeX no Overleaf e em local. Ver [Como descarregar](#como-descarregar).
+
+**Que estilo de referências usa? Posso mudar para APA?**
+Por defeito usa **IEEE**. Podes trocar para APA, autor-data (Harvard/NP 405) ou numérico simples - ver [Estilo das referências](#estilo-das-referências---trocar-o-modelo).
+
+**Que fontes preciso de ter instaladas?**
+Times New Roman, Calibri e Courier New (incluídas no Windows/Office). Por isso a compilação é com **XeLaTeX**, não `pdflatex`.
+
+**As referências não aparecem, porquê?**
+Falta correr o `biber`. Usa a sequência `xelatex` -> `biber` -> `xelatex` -> `xelatex` (ou `latexmk`).
+
+**É gratuito? Posso usar no meu relatório final?**
+Sim, é livre sob licença GPL-3.0, mantendo o crédito ao autor base.
+
+---
+
+## Contribuir
+
+As contribuições são bem-vindas - o objetivo é manter este template **100% atualizado e correto** com a informação oficial do IPG. Antes de abrir um *pull request*, lê o [`CONTRIBUTING.md`](CONTRIBUTING.md), que descreve as regras, parâmetros e o fluxo de trabalho.
+
+---
+
+## Autor e créditos
+
+**Autor base, criador e mantenedor:** Vagner Bom Jesus - [@VagnerBomJesus](https://github.com/VagnerBomJesus)
+
+Este template e projeto foram criados e são mantidos por Vagner Bom Jesus. Cada pessoa que usa o template é autora do **seu próprio relatório**, mas o **criador base do modelo** é Vagner Bom Jesus - crédito preservado no cabeçalho de todos os ficheiros e nos metadados do PDF gerado. Ao reutilizar, distribuir ou adaptar, mantém este crédito.
+
+## Instituição
 
 - **Instituição:** Instituto Politécnico da Guarda (IPG)
 - **Escola:** Escola Superior de Tecnologia e Gestão (ESTG)
-- **Curso:** Mestrado em Computação Móvel
+- **Curso (base):** Mestrado em Computação Móvel
 - **Website:** [www.ipg.pt](https://www.ipg.pt)
-
----
 
 ## Licença
 
-Este template é de uso livre para estudantes e docentes do IPG.
+Distribuído sob a licença **GPL-3.0** - ver [`LICENSE`](LICENSE). Uso livre para estudantes e docentes, mantendo o crédito ao autor base.
+
+---
+
+**Palavras-chave:** template LaTeX IPG · modelo de tese e dissertação IPG · relatório de estágio ESTG · template LaTeX Overleaf Politécnico da Guarda · XeLaTeX · biblatex · Mestrado em Computação Móvel · Engenharia Informática · Ciência de Dados e Inteligência Artificial · Cibersegurança · CTeSP · thesis template Portugal.

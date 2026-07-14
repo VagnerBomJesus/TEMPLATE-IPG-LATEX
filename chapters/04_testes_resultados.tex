@@ -1,4 +1,15 @@
 % =============================================================================
+% Template LaTeX IPG  —  https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+% Autor base, criador e mantenedor do projeto:
+%     Vagner Bom Jesus  (@VagnerBomJesus)
+%
+% Proprietario e autor original deste template. Ao reutilizar, distribuir ou
+% editar, MANTER este credito ao autor base (nao remover). Quem usa o template
+% e o autor do SEU relatorio; o criador base do modelo e Vagner Bom Jesus.
+% Licenca: GPL-3.0 (ver LICENSE).
+% =============================================================================
+
+% =============================================================================
 % Capítulo 4 — Testes e Resultados
 % Começar o capítulo numa nova página e incluir uma breve descrição sobre
 % qual será o assunto do capítulo.
@@ -59,21 +70,23 @@ Apresentar as equações devidamente formatadas e numeradas para referência no 
 
 Onde:
 \begin{itemize}
-    \item $TP$ --- \textit{True Positives} (verdadeiros positivos);
-    \item $TN$ --- \textit{True Negatives} (verdadeiros negativos);
-    \item $FP$ --- \textit{False Positives} (falsos positivos);
-    \item $FN$ --- \textit{False Negatives} (falsos negativos).
+    \item $TP$ -- \textit{True Positives} (verdadeiros positivos);
+    \item $TN$ -- \textit{True Negatives} (verdadeiros negativos);
+    \item $FP$ -- \textit{False Positives} (falsos positivos);
+    \item $FN$ -- \textit{False Negatives} (falsos negativos).
 \end{itemize}
 
 As variáveis devem ser sempre escritas em itálico, tanto na equação como no texto.
 
-% Exemplo de figura com gráfico de resultados:
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{grafico_resultados.png}
-%     \caption{Tipos de Gráficos \citep{chave_referencia}.}
-%     \label{fig:graficos}
-% \end{figure}
+% Figura de exemplo (diagrama de tipos de gráficos, de outro autor -> citar na legenda):
+A escolha do tipo de gráfico mais adequado para apresentar cada resultado pode ser orientada pelo diagrama da Figura~\ref{fig:tipos_graficos}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{image3.png}
+    \caption{Tipos de gráficos e a sua adequação a diferentes objetivos de análise \citep{abela2006}.}
+    \label{fig:tipos_graficos}
+\end{figure}
 
 % ---- 4.2 Teste B ----
 \section{Teste B}
@@ -87,8 +100,4 @@ Descrever o objetivo, a preparação, a execução e os resultados do teste B.
 % \label{sec:teste_x}
 % Repetir para cada teste adicional.
 
-% ---- Discussão dos Resultados ----
-\section{Discussão dos Resultados}
-\label{sec:discussao}
-
-Analisar e discutir os resultados obtidos nos testes, relacionando-os com os objetivos definidos no Capítulo~\ref{cap:introducao}.
+% ---- Discussão 

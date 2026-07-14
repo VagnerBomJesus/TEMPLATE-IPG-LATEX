@@ -1,4 +1,15 @@
 % =============================================================================
+% Template LaTeX IPG  —  https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+% Autor base, criador e mantenedor do projeto:
+%     Vagner Bom Jesus  (@VagnerBomJesus)
+%
+% Proprietario e autor original deste template. Ao reutilizar, distribuir ou
+% editar, MANTER este credito ao autor base (nao remover). Quem usa o template
+% e o autor do SEU relatorio; o criador base do modelo e Vagner Bom Jesus.
+% Licenca: GPL-3.0 (ver LICENSE).
+% =============================================================================
+
+% =============================================================================
 % Capítulo 2 — Trabalho Relacionado
 % Começar o capítulo numa nova página e incluir uma breve descrição sobre
 % qual será o assunto do capítulo.
@@ -25,6 +36,12 @@ Este capítulo apresenta o estado da arte relativo ao tema do trabalho, analisan
 % citações no texto.
 Descrever os métodos e tecnologias relevantes para o desenvolvimento do trabalho.
 
+% ---- Exemplos de citação (substituir pelas referências reais) ----
+%   \citet{chave}    -> "Autor (ano)"      (citação integrada no texto)
+%   \citep{chave}    -> "(Autor, ano)"     (citação entre parênteses)
+%   \textcite{chave} / \parencite{chave}   -> equivalentes nativos do biblatex
+A título de exemplo, \citet{hillier2001} apresentam uma introdução abrangente à investigação operacional, enquanto o problema de dimensionamento de lotes foi formalizado por \citet{fleischmann1990}. Abordagens heurísticas para problemas relacionados têm sido amplamente estudadas na literatura \citep{pattloch2001, wiendhal1995}.
+
 % ---- 2.2 Soluções Existentes ----
 \section{Soluções Existentes Para \ldots}
 \label{sec:solucoes_existentes}
@@ -33,21 +50,4 @@ Descrever os métodos e tecnologias relevantes para o desenvolvimento do trabalh
 % - Qual foi a metodologia utilizada para recolher informações sobre soluções
 %   existentes?
 % - Quais são as soluções existentes?
-% - Como se comparam entre si?
-% - Qual é a lacuna que o projeto proposto preenche?
-Analisar e comparar as soluções existentes no mercado ou na literatura.
-
-\begin{table}[htbp]
-    \centering
-    \caption{Comparação de soluções existentes.}
-    \label{tab:comparacao}
-    \begin{tabular}{lccc}
-        \toprule
-        \textbf{Característica} & \textbf{Solução A} & \textbf{Solução B} & \textbf{Proposta} \\
-        \midrule
-        Funcionalidade 1 & Sim & Não & Sim \\
-        Funcionalidade 2 & Não & Sim & Sim \\
-        Funcionalidade 3 & Sim & Sim & Sim \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+% 
