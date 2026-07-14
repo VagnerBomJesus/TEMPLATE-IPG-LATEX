@@ -11,7 +11,7 @@ Licença: GPL-3.0 (ver LICENSE).
   <img src="images/image2.png" alt="Instituto Politécnico da Guarda (IPG)" width="980">
 </p>
 
-# Template LaTeX - Mestrado em Computação Móvel (IPG)
+# Template LaTeX - Instituto Politécnico da Guarda (IPG)
 
 Modelo em LaTeX para dissertações, relatórios de estágio e de projeto da ESTG - Instituto Politécnico da Guarda (IPG), Portugal.
 
