@@ -1,5 +1,5 @@
 # =============================================================================
-# Template LaTeX IPG  —  https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+# Template LaTeX UPG  —  https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
 # Autor base, criador e mantenedor do projeto:
 #     Vagner Bom Jesus  (@VagnerBomJesus)
 #
