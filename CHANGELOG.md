@@ -17,7 +17,7 @@ e o versionamento segue [SemVer](https://semver.org/lang/pt-BR/).
 
 ### Alterado
 
-- A instituição passou de **Instituto Politécnico da Guarda (IPG)** a **Universidade Politécnica da Guarda (UPG)**: nome e sigla atualizados na capa, agradecimentos, lista de acrónimos, metadados do PDF, README e CONTRIBUTING. A cor passa a chamar-se `azulUPG` (`azulIPG` mantém-se como alias). O nome do repositório e as entradas antigas deste changelog não foram alterados.
+- A instituição passou de **Instituto Politécnico da Guarda (IPG)** a **Universidade Politécnica da Guarda (UPG)**: nome e sigla atualizados na capa, agradecimentos, lista de acrónimos, metadados do PDF, README e CONTRIBUTING. Os logótipos `images/image1.png` (empilhado) e `images/image2.png` (horizontal) passam a ser os da UPG. A cor passa a chamar-se `azulUPG` (`azulIPG` mantém-se como alias). O nome do repositório e as entradas antigas deste changelog não foram alterados.
 
 ### Adicionado
 

@@ -15,7 +15,7 @@ Licença: GPL-3.0 (ver LICENSE).
 
 Modelo em LaTeX para dissertações, relatórios de estágio e de projeto da ESTG - Universidade Politécnica da Guarda (UPG), Portugal.
 
-> A instituição chamava-se **Instituto Politécnico da Guarda (IPG)** e passou a **Universidade Politécnica da Guarda (UPG)**. O repositório mantém o nome `TEMPLATE-IPG-LATEX` para não quebrar as ligações existentes. Os logótipos em `images/` e o modelo Word em `Doc/` são os que acompanhavam o modelo original; confirma na tua escola se há versões novas e substitui-os se for o caso (ver [Logótipo - trocar](#logótipo---trocar)).
+> A instituição chamava-se **Instituto Politécnico da Guarda (IPG)** e passou a **Universidade Politécnica da Guarda (UPG)**. O repositório mantém o nome `TEMPLATE-IPG-LATEX` para não quebrar as ligações existentes. Os logótipos em `images/` já são os da UPG (obtidos do site oficial, sem o emblema da aliança UNITA). O modelo Word em `Doc/` é o original, ainda com a designação antiga.
 
 Baseado no modelo oficial **Modelo_Relatório_Mestrado Computacao Movel_Pt.docx** fornecido pela instituição.
 
