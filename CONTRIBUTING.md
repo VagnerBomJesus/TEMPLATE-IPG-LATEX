@@ -1,6 +1,6 @@
 <!--
 =============================================================================
-Template LaTeX UPG - https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+Template LaTeX UPG - https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX
 Autor base, criador e mantenedor do projeto: Vagner Bom Jesus (@VagnerBomJesus)
 Ao reutilizar, distribuir ou editar, MANTER o crédito ao autor base.
 Licença: GPL-3.0 (ver LICENSE).
@@ -14,7 +14,7 @@ Obrigado pelo interesse em contribuir para o **Template LaTeX UPG**.
 O objetivo do projeto é oferecer um modelo LaTeX **100% atualizado e correto** para relatórios, dissertações e projetos da Universidade Politécnica da Guarda (UPG) - Escola Superior de Tecnologia e Gestão (ESTG), fiel ao modelo Word oficial da instituição.
 
 **Autor base, criador e mantenedor:** Vagner Bom Jesus ([@VagnerBomJesus](https://github.com/VagnerBomJesus))
-**Repositório:** <https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX>
+**Repositório:** <https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX>
 
 ---
 
@@ -31,8 +31,8 @@ Quem usa o template é autor(a) do **seu próprio relatório**; o **criador base
 1. **Fork** do repositório para a tua conta.
 2. **Clonar** o teu fork:
    ```bash
-   git clone https://github.com/<o-teu-utilizador>/TEMPLATE-IPG-LATEX.git
-   cd TEMPLATE-IPG-LATEX
+   git clone https://github.com/<o-teu-utilizador>/TEMPLATE-UPG-LATEX.git
+   cd TEMPLATE-UPG-LATEX
    ```
 3. **Criar um branch** descritivo:
    ```bash
