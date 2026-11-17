@@ -1,6 +1,6 @@
 <!--
 =============================================================================
-Template LaTeX IPG - https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+Template LaTeX UPG - https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
 Autor base, criador e mantenedor do projeto: Vagner Bom Jesus (@VagnerBomJesus)
 Ao reutilizar, distribuir ou editar, MANTER o crédito ao autor base.
 Licença: GPL-3.0 (ver LICENSE).
@@ -8,12 +8,14 @@ Licença: GPL-3.0 (ver LICENSE).
 -->
 
 <p align="center">
-  <img src="images/image2.png" alt="Instituto Politécnico da Guarda (IPG)" width="980">
+  <img src="images/image2.png" alt="Universidade Politécnica da Guarda (UPG)" width="980">
 </p>
 
-# Template LaTeX - Instituto Politécnico da Guarda (IPG)
+# Template LaTeX - Universidade Politécnica da Guarda (UPG)
 
-Modelo em LaTeX para dissertações, relatórios de estágio e de projeto da ESTG - Instituto Politécnico da Guarda (IPG), Portugal.
+Modelo em LaTeX para dissertações, relatórios de estágio e de projeto da ESTG - Universidade Politécnica da Guarda (UPG), Portugal.
+
+> A instituição chamava-se **Instituto Politécnico da Guarda (IPG)** e passou a **Universidade Politécnica da Guarda (UPG)**. O repositório mantém o nome `TEMPLATE-IPG-LATEX` para não quebrar as ligações existentes. Os logótipos em `images/` e o modelo Word em `Doc/` são os que acompanhavam o modelo original; confirma na tua escola se há versões novas e substitui-os se for o caso (ver [Logótipo - trocar](#logótipo---trocar)).
 
 Baseado no modelo oficial **Modelo_Relatório_Mestrado Computacao Movel_Pt.docx** fornecido pela instituição.
 
@@ -47,11 +49,11 @@ Baseado no modelo oficial **Modelo_Relatório_Mestrado Computacao Movel_Pt.docx*
 
 ## Âmbito de utilização
 
-Este projeto **tem por base o modelo do Mestrado em Computação Móvel**, mas **pode ser usado por qualquer curso do Politécnico da Guarda** - CTeSP, licenciatura, mestrado ou pós-graduação - para elaborar o relatório de estágio/projeto, o Trabalho Final de Curso (TFC) ou a dissertação final.
+Este projeto **tem por base o modelo do Mestrado em Computação Móvel**, mas **pode ser usado por qualquer curso da Universidade Politécnica da Guarda** - CTeSP, licenciatura, mestrado ou pós-graduação - para elaborar o relatório de estágio/projeto, o Trabalho Final de Curso (TFC) ou a dissertação final.
 
-Basta **respeitar as especificidades e regras próprias de cada curso** (estrutura exigida, tipo de trabalho, capa e requisitos da respetiva escola) e adaptar os dados em `main.tex`. O template serve igualmente qualquer escola do IPG (ESTG, ESECD, ESS, ESTH).
+Basta **respeitar as especificidades e regras próprias de cada curso** (estrutura exigida, tipo de trabalho, capa e requisitos da respetiva escola) e adaptar os dados em `main.tex`. O template serve igualmente qualquer escola da UPG (ESTG, ESECD, ESS, ESTH).
 
-### Cursos da área de informática do IPG que podem usar este template
+### Cursos da área de informática da UPG que podem usar este template
 
 **CTeSP (nível 5):**
 
@@ -74,7 +76,7 @@ Basta **respeitar as especificidades e regras próprias de cada curso** (estrutu
 - Computação Móvel
 - Cibersegurança
 
-> A oferta formativa do IPG muda de ano para ano. Confirma sempre a lista atualizada e as regras específicas do teu curso em [politecnicoguarda.pt](https://politecnicoguarda.pt/). Nota: Qualquer outro curso ou escola pode usar o template, adaptando a capa e a estrutura.
+> A oferta formativa da UPG muda de ano para ano. Confirma sempre a lista atualizada e as regras específicas do teu curso em [politecnicoguarda.pt](https://politecnicoguarda.pt/). Nota: Qualquer outro curso ou escola pode usar o template, adaptando a capa e a estrutura.
 
 ---
 
@@ -202,11 +204,11 @@ TEMPLATE-IPG-LATEX/
 ├── docs/overleaf/                    # Prints usados neste README (troca de compilador)
 │
 ├── images/                           # Imagens e logótipos
-│   ├── image1.png                    # Logótipo IPG vertical (empilhado)
-│   ├── image2.png                    # Logótipo IPG horizontal (uma linha)
+│   ├── image1.png                    # Logótipo UPG vertical (empilhado)
+│   ├── image2.png                    # Logótipo UPG horizontal (uma linha)
 │   └── image3.png                    # Figura de exemplo (tipos de gráficos)
 │
-└── Doc/                              # Modelo Word original do IPG
+└── Doc/                              # Modelo Word original da UPG
     └── Modelo_Relatório_Mestrado Computacao Movel_Pt.docx
 ```
 
@@ -221,7 +223,7 @@ TEMPLATE-IPG-LATEX/
 - Gestor de bibliografia: **`biber`**
 - Para o aspeto oficial: fontes **Times New Roman**, **Calibri** e **Courier New** (Windows/Office)
 
-> Em local, o template usa por defeito o **XeLaTeX** para aceder diretamente às fontes do sistema e reproduzir fielmente o modelo Word oficial do IPG. Com `pdflatex` (ou fora do Windows, onde não há Calibri) são usadas fontes livres equivalentes - ver [Usar no Overleaf - compiladores](#usar-no-overleaf---compiladores).
+> Em local, o template usa por defeito o **XeLaTeX** para aceder diretamente às fontes do sistema e reproduzir fielmente o modelo Word oficial da UPG. Com `pdflatex` (ou fora do Windows, onde não há Calibri) são usadas fontes livres equivalentes - ver [Usar no Overleaf - compiladores](#usar-no-overleaf---compiladores).
 
 ### Sequência de compilação (obrigatória por causa das referências)
 
@@ -341,7 +343,7 @@ Referenciar sempre no texto com `Figura~\ref{fig:identificador}`.
 
 ## Estrutura e conteúdo do relatório
 
-O template segue a estrutura do modelo oficial IPG para o Mestrado em Computação Móvel:
+O template segue a estrutura do modelo oficial UPG para o Mestrado em Computação Móvel:
 
 | Secção | Ficheiro | Notas |
 |--------|----------|-------|
@@ -391,7 +393,7 @@ Cada ficheiro traz, em comentário, as perguntas-guia a responder em cada secç�
 | Legendas | Formato: `Figura X.Y - Título` (separador a traço médio) |
 | Cor do texto | **Todo o documento a preto** (sem azul nem vermelho; hiperligações também a preto) |
 
-> A cor institucional azul IPG (`#00467F`) continua **definida** no `preamble.tex` (`azulIPG`) mas não está aplicada. Para a usar nalgum elemento, basta aplicar `\color{azulIPG}`.
+> A cor institucional azul UPG (`#00467F`) continua **definida** no `preamble.tex` (`azulUPG`) mas não está aplicada. Para a usar nalgum elemento, basta aplicar `\color{azulUPG}` (o nome antigo `azulIPG` continua a funcionar).
 
 ### Regras para equações
 
@@ -424,7 +426,7 @@ Cada ficheiro traz, em comentário, as perguntas-guia a responder em cada secç�
 | `hyperref` | Hiperligações e metadados do PDF |
 | `biblatex` + `biber` | Referências (**IEEE** por defeito; APA/autor-data/numérico opcionais) |
 | `csquotes` | Aspas (recomendado pelo biblatex) |
-| `xcolor` | Cores (`azulIPG` definido) |
+| `xcolor` | Cores (`azulUPG` definido) |
 | `caption` / `subcaption` | Legendas e subfiguras |
 | `setspace` / `indentfirst` | Espaçamento e indentação |
 | `pdfpages` | Inclusão de PDFs nos anexos |
@@ -435,11 +437,11 @@ Cada ficheiro traz, em comentário, as perguntas-guia a responder em cada secç�
 
 ## Perguntas frequentes (FAQ)
 
-**Como escrevo o meu relatório, tese ou dissertação do IPG em LaTeX?**
+**Como escrevo o meu relatório, tese ou dissertação da UPG em LaTeX?**
 Descarrega este template, abre o `main.tex`, preenche os teus dados e edita os capítulos em `chapters/`. Compila com XeLaTeX + biber (ou `latexmk`), ou diretamente no Overleaf.
 
 **Este template serve para o meu curso?**
-Sim. Tem por base o Mestrado em Computação Móvel, mas serve qualquer curso do Politécnico da Guarda (CTeSP, licenciatura, mestrado ou pós-graduação) - ver [Âmbito de utilização](#âmbito-de-utilização). Respeita sempre as regras específicas do teu curso.
+Sim. Tem por base o Mestrado em Computação Móvel, mas serve qualquer curso da Universidade Politécnica da Guarda (CTeSP, licenciatura, mestrado ou pós-graduação) - ver [Âmbito de utilização](#âmbito-de-utilização). Respeita sempre as regras específicas do teu curso.
 
 **Preciso de saber LaTeX?**
 Não muito. O template já está montado; na maioria dos casos só preenches texto e segues os comentários-guia em cada ficheiro.
@@ -466,7 +468,7 @@ Sim, é livre sob licença GPL-3.0, mantendo o crédito ao autor base.
 
 ## Contribuir
 
-As contribuições são bem-vindas - o objetivo é manter este template **100% atualizado e correto** com a informação oficial do IPG. Antes de abrir um *pull request*, lê o [`CONTRIBUTING.md`](CONTRIBUTING.md), que descreve as regras, parâmetros e o fluxo de trabalho.
+As contribuições são bem-vindas - o objetivo é manter este template **100% atualizado e correto** com a informação oficial da UPG. Antes de abrir um *pull request*, lê o [`CONTRIBUTING.md`](CONTRIBUTING.md), que descreve as regras, parâmetros e o fluxo de trabalho.
 
 ---
 
@@ -478,10 +480,10 @@ Este template e projeto foram criados e são mantidos por Vagner Bom Jesus. Cada
 
 ## Instituição
 
-- **Instituição:** Instituto Politécnico da Guarda (IPG)
+- **Instituição:** Universidade Politécnica da Guarda (UPG)
 - **Escola:** Escola Superior de Tecnologia e Gestão (ESTG)
 - **Curso (base):** Mestrado em Computação Móvel
-- **Website:** [www.ipg.pt](https://www.ipg.pt)
+- **Website:** [politecnicoguarda.pt](https://politecnicoguarda.pt/)
 
 ## Licença
 
@@ -489,4 +491,4 @@ Distribuído sob a licença **GPL-3.0** - ver [`LICENSE`](LICENSE). Uso livre pa
 
 ---
 
-**Palavras-chave:** template LaTeX IPG · modelo de tese e dissertação IPG · relatório de estágio ESTG · template LaTeX Overleaf Politécnico da Guarda · XeLaTeX · biblatex · Mestrado em Computação Móvel · Engenharia Informática · Ciência de Dados e Inteligência Artificial · Cibersegurança · CTeSP · thesis template Portugal.
+**Palavras-chave:** template LaTeX UPG · modelo de tese e dissertação UPG · Universidade Politécnica da Guarda · antigo IPG (Instituto Politécnico da Guarda) · relatório de estágio ESTG · template LaTeX Overleaf Politécnico da Guarda · XeLaTeX · biblatex · Mestrado em Computação Móvel · Engenharia Informática · Ciência de Dados e Inteligência Artificial · Cibersegurança · CTeSP · thesis template Portugal.
