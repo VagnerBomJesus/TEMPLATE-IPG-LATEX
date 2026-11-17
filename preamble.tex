@@ -56,7 +56,8 @@
 \fi
 
 % --- Geometria da página ---
-\usepackage[a4paper,top=2.5cm,bottom=2.5cm,inner=3cm,outer=2.5cm]{geometry}
+% headheight=15pt: altura suficiente para o cabeçalho (evita o aviso do fancyhdr).
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,inner=3cm,outer=2.5cm,headheight=15pt]{geometry}
 
 % --- Espaçamento entre linhas ---
 \usepackage{setspace}
@@ -194,6 +195,11 @@
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{4}
 
-% --- Glossário / Acrónimos ---
-\usepackage[acronym,nonumberlist,toc]{glossaries}
-\makeglossaries
+% --- Glossário / Acrónimos (OPCIONAL - desativado por defeito) ---
+% A lista de símbolos e acrónimos do template é uma tabela manual em
+% frontmatter/simbolos_acronimos.tex e não precisa deste pacote.
+% Para usar um glossário automático (\newacronym, \gls, \printglossaries),
+% descomentar as duas linhas seguintes. Enquanto não houver \printglossaries
+% no documento, o pacote só gera avisos e torna a compilação mais lenta.
+% \usepackage[acronym,nonumberlist,toc]{glossaries}
+% \makeglossaries
