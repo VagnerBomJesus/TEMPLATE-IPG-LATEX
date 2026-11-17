@@ -13,7 +13,7 @@ Todas as alterações relevantes deste projeto são documentadas neste ficheiro.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e o versionamento segue [SemVer](https://semver.org/lang/pt-BR/).
 
-## [Não lançado]
+## [1.1.0] - 2026-11-17
 
 ### Alterado
 
@@ -27,6 +27,8 @@ e o versionamento segue [SemVer](https://semver.org/lang/pt-BR/).
 ### Corrigido
 
 - Overleaf: a compilação excedia o tempo do plano gratuito ("Your project needs more compile time"). A Calibri, inexistente no Overleaf, passou a ter a Carlito como alternativa, e o `latexmkrc` limita cada compilação a uma passagem quando corre no Overleaf.
+
+[1.1.0]: https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX/releases/tag/v1.1.0
 
 ## [1.0.1] - 2026-07-14
 
