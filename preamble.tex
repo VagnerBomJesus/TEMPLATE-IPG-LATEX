@@ -11,21 +11,49 @@
 
 % =============================================================================
 % Preâmbulo — Pacotes e Configurações
-% IMPORTANTE: requer XeLaTeX ou LuaLaTeX (NÃO pdflatex)
+% Compila com pdfLaTeX (compilador por defeito do Overleaf), XeLaTeX ou
+% LuaLaTeX. As fontes sao escolhidas automaticamente conforme o motor.
 % =============================================================================
 
 % --- Língua ---
 \usepackage[portuguese]{babel}
 
-% --- Fontes (requer XeLaTeX/LuaLaTeX + fontspec) ---
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
-\setsansfont{Calibri}[
-    BoldFont       = Calibri Bold,
-    ItalicFont     = Calibri Italic,
-    BoldItalicFont = Calibri Bold Italic
-]
-\setmonofont{Courier New}
+% --- Fontes (escolhidas conforme o compilador) ---
+\usepackage{iftex}
+\ifPDFTeX
+    % pdfLaTeX (por defeito no Overleaf): nao acede as fontes do sistema, por
+    % isso usam-se equivalentes livres incluidos no TeX Live.
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{newtxtext}          % serifada  ~ Times New Roman
+    \usepackage{carlito}            % sem serifa ~ Calibri (mesmas metricas)
+    \renewcommand{\ttdefault}{pcr}  % monoespacada ~ Courier
+\else
+    % XeLaTeX / LuaLaTeX: fontes reais do modelo Word oficial do IPG.
+    \usepackage{fontspec}
+    \setmainfont{Times New Roman}
+    % Calibri so existe no Windows. No Overleaf / Linux / macOS usa-se a
+    % Carlito (metricamente compativel e incluida no TeX Live).
+    % O teste e feito pelo ficheiro e nao com \IfFontExistsTF: procurar pelo
+    % nome uma fonte inexistente custa tempo em cada passagem e faz o plano
+    % gratuito do Overleaf exceder o tempo de compilacao.
+    \IfFileExists{C:/Windows/Fonts/calibri.ttf}{%
+        \setsansfont{Calibri}[
+            BoldFont       = Calibri Bold,
+            ItalicFont     = Calibri Italic,
+            BoldItalicFont = Calibri Bold Italic
+        ]%
+    }{%
+        \setsansfont{Carlito}[
+            Extension      = .ttf,
+            UprightFont    = *-Regular,
+            BoldFont       = *-Bold,
+            ItalicFont     = *-Italic,
+            BoldItalicFont = *-BoldItalic
+        ]%
+    }
+    \setmonofont{Courier New}
+\fi
 
 % --- Geometria da página ---
 \usepackage[a4paper,top=2.5cm,bottom=2.5cm,inner=3cm,outer=2.5cm]{geometry}
@@ -104,7 +132,7 @@
     pdfauthor={\nomeAutor},
     pdftitle={\tituloRelatorio},
     pdfcreator={Template LaTeX IPG criado por Vagner Bom Jesus (@VagnerBomJesus) -- github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX},
-    pdfproducer={XeLaTeX -- Template base de Vagner Bom Jesus (@VagnerBomJesus)}
+    pdfproducer={LaTeX -- Template base de Vagner Bom Jesus (@VagnerBomJesus)}
 }
 
 % --- Aspas (recomendado pelo biblatex; carregar antes) ---

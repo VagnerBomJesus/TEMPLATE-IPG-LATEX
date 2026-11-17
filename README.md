@@ -29,18 +29,19 @@ Baseado no modelo oficial **Modelo_Relatório_Mestrado Computacao Movel_Pt.docx*
 
 1. [Âmbito de utilização](#âmbito-de-utilização)
 2. [Como descarregar](#como-descarregar)
-3. [Estrutura do projeto](#estrutura-do-projeto)
-4. [Como compilar (por defeito)](#como-compilar-por-defeito)
-5. [Estilo das referências - trocar o modelo](#estilo-das-referências---trocar-o-modelo)
-6. [Logótipo - trocar](#logótipo---trocar)
-7. [Como usar](#como-usar)
-8. [Estrutura e conteúdo do relatório](#estrutura-e-conteúdo-do-relatório)
-9. [Formatação](#formatação)
-10. [Pacotes utilizados](#pacotes-utilizados)
-11. [Perguntas frequentes (FAQ)](#perguntas-frequentes-faq)
-12. [Contribuir](#contribuir)
-13. [Autor e créditos](#autor-e-créditos)
-14. [Licença](#licença)
+3. [Usar no Overleaf - compiladores](#usar-no-overleaf---compiladores)
+4. [Estrutura do projeto](#estrutura-do-projeto)
+5. [Como compilar (por defeito)](#como-compilar-por-defeito)
+6. [Estilo das referências - trocar o modelo](#estilo-das-referências---trocar-o-modelo)
+7. [Logótipo - trocar](#logótipo---trocar)
+8. [Como usar](#como-usar)
+9. [Estrutura e conteúdo do relatório](#estrutura-e-conteúdo-do-relatório)
+10. [Formatação](#formatação)
+11. [Pacotes utilizados](#pacotes-utilizados)
+12. [Perguntas frequentes (FAQ)](#perguntas-frequentes-faq)
+13. [Contribuir](#contribuir)
+14. [Autor e créditos](#autor-e-créditos)
+15. [Licença](#licença)
 
 ---
 
@@ -96,10 +97,72 @@ Em alternativa, no GitHub: botão verde **Code → Download ZIP**.
 
 Podes usar o template diretamente no browser:
 
-- **[Overleaf](https://www.overleaf.com/)** — **New Project → Upload Project** com o ZIP. **Importante:** abre **Menu → Settings → Compiler** e escolhe **XeLaTeX** (o Overleaf usa pdfLaTeX por defeito, e este template precisa de XeLaTeX).
-- **[Prism (OpenAI)](https://prism.openai.com/)** — editor LaTeX com IA, gratuito e no browser. Também compila e faz preview; garante que o motor está em **XeLaTeX** (por causa do `fontspec`).
+- **[Overleaf](https://www.overleaf.com/)** — **New Project → Upload Project** com o ZIP. Funciona logo com o compilador por defeito (**pdfLaTeX**); não é preciso mudar nada. Ver [Usar no Overleaf - compiladores](#usar-no-overleaf---compiladores).
+- **[Prism (OpenAI)](https://prism.openai.com/)** — editor LaTeX com IA, gratuito e no browser. Também compila e faz preview.
 
-> Nota: em compiladores no browser, as fontes Times New Roman / Calibri (do Windows/Office) podem não estar instaladas e ser substituídas por equivalentes. O documento compila na mesma; para reproduzir exatamente as fontes oficiais, compila em local com XeLaTeX.
+> Nota: em compiladores no browser, as fontes Times New Roman / Calibri (do Windows/Office) podem não estar instaladas e são substituídas por equivalentes livres. O documento compila na mesma; para reproduzir exatamente as fontes oficiais, compila em local, no Windows, com XeLaTeX.
+
+---
+
+## Usar no Overleaf - compiladores
+
+O template foi testado no Overleaf (TeX Live 2026, plano gratuito) e compila **sem alterações** com o compilador por defeito.
+
+### Importar o projeto
+
+1. Descarrega o [ZIP do projeto](https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX/archive/refs/heads/main.zip).
+2. No Overleaf: **New Project → Upload Project** e escolhe o ZIP.
+3. Carrega em **Recompile**. Na primeira vez, carrega **3 ou 4 vezes** até o índice, as referências cruzadas e a bibliografia ficarem preenchidos (ver [porquê](#porque-é-preciso-carregar-em-recompile-várias-vezes)).
+
+### Compiladores que o Overleaf suporta
+
+O Overleaf tem quatro compiladores (motores LaTeX). Este template comporta-se assim em cada um:
+
+| Compilador | O que é | Neste template |
+|------------|---------|----------------|
+| **pdfLaTeX** | O compilador **por defeito** do Overleaf. Gera o PDF diretamente; é o mais comum e compatível. Não acede às fontes do sistema. | **Funciona (por defeito no Overleaf).** Usa fontes livres equivalentes: `newtxtext` (≈ Times New Roman), Carlito (≈ Calibri) e Courier. |
+| **XeLaTeX** | Motor moderno com Unicode nativo e acesso às fontes do sistema (pacote `fontspec`). | **Funciona.** Usa Times New Roman e Courier New reais; a Calibri não existe no Overleaf, por isso é usada a Carlito (mesmas métricas). |
+| **LuaLaTeX** | Semelhante ao XeLaTeX (Unicode + `fontspec`), com Lua embutido. Cada passagem é mais lenta. | **Funciona.** Mesmas fontes que o XeLaTeX. |
+| **LaTeX** | Motor clássico que gera DVI e só depois converte para PDF. | **Não usar.** Em modo DVI as imagens PNG (logótipo da capa e figuras) não são suportadas. |
+
+O `preamble.tex` deteta o compilador automaticamente (pacote `iftex`) e escolhe as fontes certas - não é preciso editar nada ao trocar.
+
+### Como trocar o compilador no Overleaf
+
+1. Com o projeto aberto, clica no ícone **Settings** (roda dentada), no canto inferior esquerdo.
+
+   ![Overleaf: botão Settings no canto inferior esquerdo e botão Recompile](docs/overleaf/01-abrir-settings.png)
+
+2. Abre o separador **Compiler** e, no campo **Compiler**, escolhe o motor. Por defeito está **pdfLaTeX**:
+
+   ![Overleaf: Settings, separador Compiler com pdfLaTeX selecionado](docs/overleaf/02-compiler-pdflatex.png)
+
+3. Para usar as fontes reais (Times New Roman / Courier New), escolhe **XeLaTeX** (ou **LuaLaTeX**):
+
+   ![Overleaf: Settings, separador Compiler com XeLaTeX selecionado](docs/overleaf/03-compiler-xelatex.png)
+
+4. Fecha a janela. Depois de trocar de compilador, usa a seta ao lado de **Recompile → Recompile from scratch** e a seguir carrega em **Recompile** mais 3 ou 4 vezes.
+
+> No Overleaf, a escolha feita em **Settings → Compiler** sobrepõe-se ao `latexmkrc` e ao comentário `% !TeX program` do `main.tex`.
+
+### Porque é preciso carregar em Recompile várias vezes
+
+Uma compilação completa de raiz precisa de 3-4 passagens do compilador mais o `biber` (cerca de 11 s), e o plano gratuito do Overleaf interrompe a compilação por volta dos 10 s com o erro **"Your project needs more compile time"**. Para evitar isso, o `latexmkrc` limita - **só no Overleaf** - cada compilação a uma passagem (2 a 4 s). Por isso:
+
+- nas primeiras compilações o PDF aparece com `??` ou `[?]` no lugar das referências e sem índice - é normal;
+- carrega em **Recompile** até desaparecerem (3 ou 4 vezes na primeira vez);
+- depois disso, cada alteração precisa normalmente de um só **Recompile** (mais um ou dois se mexeres em citações ou referências cruzadas).
+
+Em compilação local este limite não se aplica: o `latexmk` faz todas as passagens de uma vez.
+
+### Erros comuns no Overleaf
+
+| Mensagem | Causa | Solução |
+|----------|-------|---------|
+| `Fatal Package fontspec Error: The fontspec package requires either XeTeX or LuaTeX` | Versão antiga do template (só XeLaTeX) compilada com pdfLaTeX. | Atualiza o `preamble.tex` para a versão atual, ou muda o compilador para **XeLaTeX** em **Settings → Compiler**. |
+| `Your project needs more compile time` | A compilação excedeu o tempo do plano gratuito. | Confirma que o `latexmkrc` do projeto é o atual e carrega de novo em **Recompile**. |
+| Referências com `[?]` / índice vazio | Ainda faltam passagens. | Carrega em **Recompile** mais uma ou duas vezes. |
+| `No PDF` com o compilador **LaTeX** | O modo DVI não suporta PNG. | Escolhe **pdfLaTeX**, **XeLaTeX** ou **LuaLaTeX**. |
 
 ---
 
@@ -109,7 +172,7 @@ Podes usar o template diretamente no browser:
 TEMPLATE-IPG-LATEX/
 ├── main.tex                          # Ficheiro principal (compilar este)
 ├── preamble.tex                      # Pacotes, configurações, estilos e estilo das referências
-├── latexmkrc                         # Força XeLaTeX (local e Overleaf)
+├── latexmkrc                         # XeLaTeX em local; no Overleaf, uma passagem por compilação
 ├── .gitignore                        # Ignora ficheiros auxiliares
 ├── LICENSE                           # GPL-3.0
 ├── README.md                         # Este ficheiro
@@ -136,6 +199,8 @@ TEMPLATE-IPG-LATEX/
 │   ├── referencias.bib               # Base de dados de referências
 │   └── anexos.tex
 │
+├── docs/overleaf/                    # Prints usados neste README (troca de compilador)
+│
 ├── images/                           # Imagens e logótipos
 │   ├── image1.png                    # Logótipo IPG vertical (empilhado)
 │   ├── image2.png                    # Logótipo IPG horizontal (uma linha)
@@ -152,11 +217,11 @@ TEMPLATE-IPG-LATEX/
 ### Pré-requisitos
 
 - [TeX Live](https://www.tug.org/texlive/) (completo) ou [MiKTeX](https://miktex.org/)
-- Compilador: **`xelatex`** (obrigatório - não usar `pdflatex`)
+- Compilador: **`xelatex`** (recomendado em local). Também compila com `lualatex` e `pdflatex`.
 - Gestor de bibliografia: **`biber`**
-- Fontes do sistema instaladas: **Times New Roman**, **Calibri** e **Courier New** (Windows/Office)
+- Para o aspeto oficial: fontes **Times New Roman**, **Calibri** e **Courier New** (Windows/Office)
 
-> Este template usa **XeLaTeX** para aceder diretamente às fontes do sistema e reproduzir fielmente o modelo Word oficial do IPG.
+> Em local, o template usa por defeito o **XeLaTeX** para aceder diretamente às fontes do sistema e reproduzir fielmente o modelo Word oficial do IPG. Com `pdflatex` (ou fora do Windows, onde não há Calibri) são usadas fontes livres equivalentes - ver [Usar no Overleaf - compiladores](#usar-no-overleaf---compiladores).
 
 ### Sequência de compilação (obrigatória por causa das referências)
 
@@ -345,7 +410,9 @@ Cada ficheiro traz, em comentário, as perguntas-guia a responder em cada secç�
 
 | Pacote | Finalidade |
 |--------|-----------|
-| `fontspec` | Fontes do sistema (Times New Roman, Calibri, Courier New) - requer XeLaTeX |
+| `iftex` | Deteta o compilador (pdfLaTeX / XeLaTeX / LuaLaTeX) para escolher as fontes |
+| `fontspec` | Fontes do sistema (Times New Roman, Calibri, Courier New) - só com XeLaTeX/LuaLaTeX |
+| `newtxtext` / `carlito` | Fontes equivalentes (≈ Times New Roman / ≈ Calibri) - só com pdfLaTeX |
 | `babel` | Língua portuguesa |
 | `titlesec` | Formatação dos headings |
 | `geometry` | Margens A4 |
@@ -369,7 +436,7 @@ Cada ficheiro traz, em comentário, as perguntas-guia a responder em cada secç�
 ## Perguntas frequentes (FAQ)
 
 **Como escrevo o meu relatório, tese ou dissertação do IPG em LaTeX?**
-Descarrega este template, abre o `main.tex`, preenche os teus dados e edita os capítulos em `chapters/`. Compila com XeLaTeX + biber (ou `latexmk`).
+Descarrega este template, abre o `main.tex`, preenche os teus dados e edita os capítulos em `chapters/`. Compila com XeLaTeX + biber (ou `latexmk`), ou diretamente no Overleaf.
 
 **Este template serve para o meu curso?**
 Sim. Tem por base o Mestrado em Computação Móvel, mas serve qualquer curso do Politécnico da Guarda (CTeSP, licenciatura, mestrado ou pós-graduação) - ver [Âmbito de utilização](#âmbito-de-utilização). Respeita sempre as regras específicas do teu curso.
@@ -378,16 +445,19 @@ Sim. Tem por base o Mestrado em Computação Móvel, mas serve qualquer curso do
 Não muito. O template já está montado; na maioria dos casos só preenches texto e segues os comentários-guia em cada ficheiro.
 
 **Posso usar no Overleaf ou só localmente?**
-Ambos. Em local, o `latexmkrc` já usa o XeLaTeX. No Overleaf, define o motor em **Menu → Compiler → XeLaTeX** (por defeito o Overleaf usa pdfLaTeX). Ver [Como descarregar](#como-descarregar).
+Ambos. Em local, o `latexmkrc` já usa o XeLaTeX. No Overleaf funciona logo com o compilador por defeito (pdfLaTeX) e também com XeLaTeX e LuaLaTeX. Ver [Usar no Overleaf - compiladores](#usar-no-overleaf---compiladores).
 
 **Que estilo de referências usa? Posso mudar para APA?**
 Por defeito usa **IEEE**. Podes trocar para APA, autor-data (Harvard/NP 405) ou numérico simples - ver [Estilo das referências](#estilo-das-referências---trocar-o-modelo).
 
 **Que fontes preciso de ter instaladas?**
-Times New Roman, Calibri e Courier New (incluídas no Windows/Office). Por isso a compilação é com **XeLaTeX**, não `pdflatex`.
+Para o aspeto oficial: Times New Roman, Calibri e Courier New (incluídas no Windows/Office), com **XeLaTeX**. Se não as tiveres (Overleaf, Linux, macOS) ou usares `pdflatex`, o template usa automaticamente fontes livres equivalentes.
 
 **As referências não aparecem, porquê?**
-Falta correr o `biber`. Usa a sequência `xelatex` -> `biber` -> `xelatex` -> `xelatex` (ou `latexmk`).
+Falta correr o `biber`. Usa a sequência `xelatex` -> `biber` -> `xelatex` -> `xelatex` (ou `latexmk`). No Overleaf, carrega em **Recompile** mais algumas vezes.
+
+**No Overleaf aparece "Your project needs more compile time" ou um erro do `fontspec`. O que faço?**
+Ver [Erros comuns no Overleaf](#erros-comuns-no-overleaf).
 
 **É gratuito? Posso usar no meu relatório final?**
 Sim, é livre sob licença GPL-3.0, mantendo o crédito ao autor base.

@@ -51,7 +51,7 @@ Quem usa o template é autor(a) do **seu próprio relatório**; o **criador base
 
 ## Regras de estilo e formatação
 
-- **Compilador:** o template é **XeLaTeX** (nunca `pdflatex`). Não introduzir código incompatível com XeLaTeX.
+- **Compilador:** o template compila com **XeLaTeX** (por defeito em local), **LuaLaTeX** e **pdfLaTeX** (por defeito no Overleaf). Não introduzir código que funcione só num deles; o que for específico de um motor fica dentro do bloco `\ifPDFTeX` do `preamble.tex`.
 - **Codificação:** ficheiros em **UTF-8**.
 - **Comentários:** em português, claros e a explicar o "porquê" quando não for óbvio.
 - **Estrutura de pastas:** manter a organização (`frontmatter/`, `chapters/`, `backmatter/`, `images/`). Não mover ficheiros sem justificação.

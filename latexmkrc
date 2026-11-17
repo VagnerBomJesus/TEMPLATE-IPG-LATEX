@@ -17,3 +17,17 @@
 $pdf_mode = 5;        # 5 = xelatex
 $postscript_mode = 0;
 $dvi_mode = 0;
+
+# -----------------------------------------------------------------------------
+# So no Overleaf (em compilacao local nao tem efeito).
+# No Overleaf o compilador e o escolhido em Settings -> Compiler, que se
+# sobrepoe ao $pdf_mode acima. Em qualquer motor, uma compilacao de raiz deste
+# template precisa de 3-4 passagens + biber (~11 s), o que excede o tempo do
+# plano gratuito (~10 s) e da o erro "Your project needs more compile time".
+# Com uma passagem por compilacao (~2-4 s) nunca se chega ao limite: na
+# primeira vez, carregar em "Recompile" 3 ou 4 vezes ate as referencias, a
+# bibliografia e os indices ficarem resolvidos. Depois disso basta uma vez.
+# -----------------------------------------------------------------------------
+if ( defined(&overleaf_post_process) || cwd() =~ m{^/compile} ) {
+    $max_repeat = 1;
+}
