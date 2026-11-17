@@ -431,7 +431,7 @@ Cada ficheiro traz, em comentário, as perguntas-guia a responder em cada secç�
 | `setspace` / `indentfirst` | Espaçamento e indentação |
 | `pdfpages` | Inclusão de PDFs nos anexos |
 | `chngcntr` | Numeração de figuras/tabelas/equações por capítulo |
-| `glossaries` | Acrónimos/glossário |
+| `glossaries` | Glossário automático - **opcional**, vem comentado no `preamble.tex` |
 
 ---
 
