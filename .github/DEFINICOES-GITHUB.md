@@ -13,7 +13,7 @@ Estes valores **não se configuram por ficheiro** — colam-se nas definições 
 Colar em **About → Description**:
 
 ```
-Modelo/template LaTeX para relatórios, teses e dissertações do Instituto Politécnico da Guarda (IPG) - ESTG. XeLaTeX, biblatex (IEEE), pronto para Overleaf.
+Modelo/template LaTeX para relatórios, teses e dissertações da Universidade Politécnica da Guarda (UPG) - ESTG. XeLaTeX, biblatex (IEEE), pronto para Overleaf.
 ```
 
 Website (campo ao lado): o link do Overleaf (depois de publicar) ou a GitHub Pages.
@@ -23,8 +23,8 @@ Website (campo ao lado): o link do Overleaf (depois de publicar) ou a GitHub Pag
 Em **About → engrenagem → Topics**, adicionar (separados por Enter):
 
 ```
-latex  latex-template  template  thesis-template  ipg  politecnico-guarda
-instituto-politecnico-guarda  estg  tese  dissertacao  relatorio  mestrado
+latex  latex-template  template  thesis-template  upg  ipg  politecnico-guarda
+universidade-politecnica-guarda  instituto-politecnico-guarda  estg  tese  dissertacao  relatorio  mestrado
 licenciatura  computacao-movel  xelatex  biblatex  overleaf  portugal
 ```
 

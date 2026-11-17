@@ -1,6 +1,6 @@
 <!--
 =============================================================================
-Template LaTeX IPG - https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+Template LaTeX UPG - https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
 Autor base, criador e mantenedor do projeto: Vagner Bom Jesus (@VagnerBomJesus)
 Ao reutilizar, distribuir ou editar, MANTER o crédito ao autor base.
 Licença: GPL-3.0 (ver LICENSE).
@@ -9,9 +9,9 @@ Licença: GPL-3.0 (ver LICENSE).
 
 # Guia de Contribuição
 
-Obrigado pelo interesse em contribuir para o **Template LaTeX IPG**.
+Obrigado pelo interesse em contribuir para o **Template LaTeX UPG**.
 
-O objetivo do projeto é oferecer um modelo LaTeX **100% atualizado e correto** para relatórios, dissertações e projetos do Instituto Politécnico da Guarda (IPG) - Escola Superior de Tecnologia e Gestão (ESTG), fiel ao modelo Word oficial da instituição.
+O objetivo do projeto é oferecer um modelo LaTeX **100% atualizado e correto** para relatórios, dissertações e projetos da Universidade Politécnica da Guarda (UPG) - Escola Superior de Tecnologia e Gestão (ESTG), fiel ao modelo Word oficial da instituição.
 
 **Autor base, criador e mantenedor:** Vagner Bom Jesus ([@VagnerBomJesus](https://github.com/VagnerBomJesus))
 **Repositório:** <https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX>
@@ -63,7 +63,7 @@ Quem usa o template é autor(a) do **seu próprio relatório**; o **criador base
 
 ## Regras de conteúdo (parâmetros do projeto)
 
-- **Informação institucional:** qualquer dado do IPG/ESTG (nomes, cursos, regras de formatação, estrutura do relatório) deve ser **oficial e verificado**. Indicar a fonte no PR (ex.: modelo Word oficial, despacho, página do IPG).
+- **Informação institucional:** qualquer dado da UPG/ESTG (nomes, cursos, regras de formatação, estrutura do relatório) deve ser **oficial e verificado**. Indicar a fonte no PR (ex.: modelo Word oficial, despacho, página da UPG).
 - **Fidelidade ao modelo oficial:** alterações de formatação (fontes, margens, tamanhos, numeração) devem manter a conformidade com o modelo Word oficial em `Doc/`.
 - **Figuras/tabelas de outros autores:** têm de ter **referência bibliográfica** na legenda.
 - **Exemplos:** manter os capítulos como modelo genérico e reutilizável (texto de exemplo + comentários-guia), não como um relatório concreto.
@@ -113,7 +113,7 @@ Mensagens curtas, no imperativo e descritivas. Exemplos:
 
 - `Corrige contador lstlisting no preamble`
 - `Adiciona estilo APA comentado`
-- `Atualiza margens conforme modelo oficial IPG`
+- `Atualiza margens conforme modelo oficial UPG`
 
 ---
 
