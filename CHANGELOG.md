@@ -1,6 +1,6 @@
 <!--
 =============================================================================
-Template LaTeX IPG - https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+Template LaTeX UPG - https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
 Autor base, criador e mantenedor do projeto: Vagner Bom Jesus (@VagnerBomJesus)
 Ao reutilizar, distribuir ou editar, MANTER o crédito ao autor base.
 Licença: GPL-3.0 (ver LICENSE).
@@ -14,6 +14,10 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 e o versionamento segue [SemVer](https://semver.org/lang/pt-BR/).
 
 ## [Não lançado]
+
+### Alterado
+
+- A instituição passou de **Instituto Politécnico da Guarda (IPG)** a **Universidade Politécnica da Guarda (UPG)**: nome e sigla atualizados na capa, agradecimentos, lista de acrónimos, metadados do PDF, README e CONTRIBUTING. A cor passa a chamar-se `azulUPG` (`azulIPG` mantém-se como alias). O nome do repositório e as entradas antigas deste changelog não foram alterados.
 
 ### Adicionado
 
