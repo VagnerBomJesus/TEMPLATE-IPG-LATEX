@@ -1,6 +1,6 @@
 <!--
 =============================================================================
-Template LaTeX UPG - https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+Template LaTeX UPG - https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX
 Autor base, criador e mantenedor do projeto: Vagner Bom Jesus (@VagnerBomJesus)
 Ao reutilizar, distribuir ou editar, MANTER o crédito ao autor base.
 Licença: GPL-3.0 (ver LICENSE).
@@ -15,15 +15,15 @@ Licença: GPL-3.0 (ver LICENSE).
 
 Modelo em LaTeX para dissertações, relatórios de estágio e de projeto da ESTG - Universidade Politécnica da Guarda (UPG), Portugal.
 
-> A instituição chamava-se **Instituto Politécnico da Guarda (IPG)** e passou a **Universidade Politécnica da Guarda (UPG)**. O repositório mantém o nome `TEMPLATE-IPG-LATEX` para não quebrar as ligações existentes. Os logótipos em `images/` já são os da UPG (obtidos do site oficial, sem o emblema da aliança UNITA). O modelo Word em `Doc/` é o original, ainda com a designação antiga.
+> A instituição chamava-se **Instituto Politécnico da Guarda (IPG)** e passou a **Universidade Politécnica da Guarda (UPG)**. O repositório também mudou de nome, de `TEMPLATE-IPG-LATEX` para `TEMPLATE-UPG-LATEX`; as ligações antigas são redirecionadas pelo GitHub. Os logótipos em `images/` já são os da UPG (obtidos do site oficial, sem o emblema da aliança UNITA). O modelo Word em `Doc/` é o original, ainda com a designação antiga.
 
 Baseado no modelo oficial **Modelo_Relatório_Mestrado Computacao Movel_Pt.docx** fornecido pela instituição.
 
 > **Autor base / criador / mantenedor:** Vagner Bom Jesus ([@VagnerBomJesus](https://github.com/VagnerBomJesus))
-> **Repositório:** <https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX>
+> **Repositório:** <https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX>
 > **Licença:** GPL-3.0 (ver [`LICENSE`](LICENSE)). Ao reutilizar ou editar, mantém o crédito ao autor base.
 
-**Descarregar agora:** [descarregar o template completo em ZIP](https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX/archive/refs/heads/main.zip) (um clique, pronto a usar).
+**Descarregar agora:** [descarregar o template completo em ZIP](https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX/archive/refs/heads/main.zip) (um clique, pronto a usar).
 
 ---
 
@@ -85,13 +85,13 @@ Basta **respeitar as especificidades e regras próprias de cada curso** (estrutu
 ### Opção A - clonar com Git (recomendado)
 
 ```bash
-git clone https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX.git
-cd TEMPLATE-IPG-LATEX
+git clone https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX.git
+cd TEMPLATE-UPG-LATEX
 ```
 
 ### Opção B - descarregar ZIP (um clique)
 
-**[Descarregar o projeto completo em ZIP](https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX/archive/refs/heads/main.zip)** — pronto a usar; depois é só extrair a pasta.
+**[Descarregar o projeto completo em ZIP](https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX/archive/refs/heads/main.zip)** — pronto a usar; depois é só extrair a pasta.
 
 Em alternativa, no GitHub: botão verde **Code → Download ZIP**.
 
@@ -112,7 +112,7 @@ O template foi testado no Overleaf (TeX Live 2026, plano gratuito) e compila **s
 
 ### Importar o projeto
 
-1. Descarrega o [ZIP do projeto](https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX/archive/refs/heads/main.zip).
+1. Descarrega o [ZIP do projeto](https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX/archive/refs/heads/main.zip).
 2. No Overleaf: **New Project → Upload Project** e escolhe o ZIP.
 3. Carrega em **Recompile**. Na primeira vez, carrega **3 ou 4 vezes** até o índice, as referências cruzadas e a bibliografia ficarem preenchidos (ver [porquê](#porque-é-preciso-carregar-em-recompile-várias-vezes)).
 
@@ -171,7 +171,7 @@ Em compilação local este limite não se aplica: o `latexmk` faz todas as passa
 ## Estrutura do projeto
 
 ```
-TEMPLATE-IPG-LATEX/
+TEMPLATE-UPG-LATEX/
 ├── main.tex                          # Ficheiro principal (compilar este)
 ├── preamble.tex                      # Pacotes, configurações, estilos e estilo das referências
 ├── latexmkrc                         # XeLaTeX em local; no Overleaf, uma passagem por compilação
