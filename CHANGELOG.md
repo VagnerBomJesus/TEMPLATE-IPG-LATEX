@@ -13,13 +13,15 @@ Todas as alterações relevantes deste projeto são documentadas neste ficheiro.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e o versionamento segue [SemVer](https://semver.org/lang/pt-BR/).
 
-## [Não lançado]
+## [1.1.1] - 2026-11-17
 
 ### Corrigido
 
 - `backmatter/bibliografia.tex` estava cortado desde a v1.0.0: faltavam o `\nocite{*}` e o `\printbibliography`, por isso a lista de referências não era impressa no PDF.
 - Compilação sem avisos: `headheight` ajustado para o `fancyhdr` e pacote `glossaries` (não usado pelo template) passa a opcional, comentado no `preamble.tex`.
 - Comentários cortados no fim de `chapters/02_trabalho_relacionado.tex` e `chapters/04_testes_resultados.tex`.
+
+[1.1.1]: https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX/releases/tag/v1.1.1
 
 ## [1.1.0] - 2026-11-17
 
