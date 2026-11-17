@@ -1,6 +1,6 @@
 <!--
 =============================================================================
-Template LaTeX UPG - https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX
+Template LaTeX UPG - https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX
 Autor base, criador e mantenedor do projeto: Vagner Bom Jesus (@VagnerBomJesus)
 Ao reutilizar, distribuir ou editar, MANTER o crédito ao autor base.
 Licença: GPL-3.0 (ver LICENSE).
@@ -17,7 +17,7 @@ e o versionamento segue [SemVer](https://semver.org/lang/pt-BR/).
 
 ### Alterado
 
-- A instituição passou de **Instituto Politécnico da Guarda (IPG)** a **Universidade Politécnica da Guarda (UPG)**: nome e sigla atualizados na capa, agradecimentos, lista de acrónimos, metadados do PDF, README e CONTRIBUTING. Os logótipos `images/image1.png` (empilhado) e `images/image2.png` (horizontal) passam a ser os da UPG. A cor passa a chamar-se `azulUPG` (`azulIPG` mantém-se como alias). O nome do repositório e as entradas antigas deste changelog não foram alterados.
+- A instituição passou de **Instituto Politécnico da Guarda (IPG)** a **Universidade Politécnica da Guarda (UPG)**: nome e sigla atualizados na capa, agradecimentos, lista de acrónimos, metadados do PDF, README e CONTRIBUTING. Os logótipos `images/image1.png` (empilhado) e `images/image2.png` (horizontal) passam a ser os da UPG. A cor passa a chamar-se `azulUPG` (`azulIPG` mantém-se como alias). O repositório passou de `TEMPLATE-IPG-LATEX` a `TEMPLATE-UPG-LATEX`, com todas as ligações atualizadas. As entradas antigas deste changelog não foram alteradas.
 
 ### Adicionado
 
@@ -35,7 +35,7 @@ e o versionamento segue [SemVer](https://semver.org/lang/pt-BR/).
 - `preamble.tex` estava truncado na v1.0.0 (ficheiro cortado a meio), o que impedia a compilação. Reescrito completo — o template volta a compilar (XeLaTeX + biber).
 - `.gitignore` completado: passa a ignorar o `*.xdv` do XeLaTeX e ficheiros temporários do Office.
 
-[1.0.1]: https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX/releases/tag/v1.0.1
+[1.0.1]: https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX/releases/tag/v1.0.1
 
 ## [1.0.0] - 2026-07-14
 
@@ -60,4 +60,4 @@ Primeira versão estável do template LaTeX para o Instituto Politécnico da Gua
 - Contador `lstlisting` definido via `\AtBeginDocument` (evita o erro "No counter 'lstlisting' defined").
 - `csquotes` carregado antes do `biblatex` (recomendação do biblatex).
 
-[1.0.0]: https://github.com/VagnerBomJesus/TEMPLATE-IPG-LATEX/releases/tag/v1.0.0
+[1.0.0]: https://github.com/VagnerBomJesus/TEMPLATE-UPG-LATEX/releases/tag/v1.0.0
